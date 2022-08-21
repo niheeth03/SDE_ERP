@@ -1,25 +1,23 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
-import IALogin from "./international_admissions/pages/Login/Login";
-import IARegister from "./international_admissions/pages/Register/Register";
-import IAHome from "./international_admissions/pages/Home/Home"
-import IAApplication from "./international_admissions/pages/Application/Application"
-import IAOffers from "./international_admissions/pages/Offers/Offers"
-import APLogin from "./alumni_portal/pages/Login/Login"
-import APRegister from "./alumni_portal/pages/Register/Register"
+import Alumni_portal from "./alumni_portal/index";
+import Alum_login from "./alumni_portal/pages/login"
+import Alum_register from "./alumni_portal/pages/register"
+import International_admissions from "./international_admissions/index";
+import International_Application from "./international_admissions/pages/Application/index";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-            <Route path='/international_admissions_home' element={<IAHome/>} />
-            <Route path='/international_admissions_applications' element={<IAApplication/>} />
-            <Route path='/international_admissions_login' element={<IALogin/>} />
-            <Route path='/international_admissions_register' element={<IARegister/>} />
-            <Route path='/international_admissions_offers' element={<IAOffers/>} />
-            <Route path ='/alumni_portal_login' element={<APLogin/>}/>
-            <Route path ='/alumni_portal_register' element={<APRegister/>}/>
+            <Route path='alumni_portal' element={<Alumni_portal/>} >
+                <Route path='login' element={<Alum_login/>}/>
+                <Route path='register' element={<Alum_register/>}/>
+            </Route>
+            <Route path='international_admissions' element={<International_admissions/>}/>
+            <Route path='international_admissions/application' element={<International_Application />}/>
+            
         </Routes>
 
 
