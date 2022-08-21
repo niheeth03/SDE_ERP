@@ -29,7 +29,7 @@ const handleSubmit=()=>{
 
 return (
     <div className="center">
-        <h1>Register</h1>
+        <h1>Application</h1>
         <div className="form">
         <div className="txt_field">
         <input type="text"  onChange={(e)=>{setFirstname(e.target.value);}}/>
