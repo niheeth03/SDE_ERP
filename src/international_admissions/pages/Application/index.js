@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from "react";
 
 const Application = () => {
   const [firstname, setFirstname] = useState("");
+  const [middlename, setMiddlename] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [gender, setGender] = useState("");
@@ -14,7 +15,9 @@ const Application = () => {
   const handleSubmit = () => {
     const newStudent = {
       firstname: firstname,
+      middlename: middlename,
       lastname: lastname,
+      mobileNumber: mobileNumber,
       email: email,
       gender: gender,
       degree: degree,
@@ -42,7 +45,7 @@ const Application = () => {
           <input
             type="text"
             onChange={(e) => {
-              setLastname(e.target.value);
+              setMiddlename(e.target.value);
             }}
           />
           <span></span>
@@ -89,6 +92,7 @@ const Application = () => {
             <option value="Male">Male</option>
           </select>
         </label>
+        <br></br>
         <label>
           Degree:
           <select
@@ -101,8 +105,9 @@ const Application = () => {
             <option value="Phd">Phd</option>
           </select>
         </label>
+        <br></br>
         <label>
-          Field of Study:
+          Department:
           <select
             onChange={(e) => {
               setBranch(e.target.value);
