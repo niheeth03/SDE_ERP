@@ -10,7 +10,7 @@ const Alumni_portal = () => {
   return (
     <div>
       <nav>
-        <Link to="/">Home </Link>
+        <Link to="">Home </Link>
         <Link to="payments">Payments</Link>
       </nav>
       <Outlet />

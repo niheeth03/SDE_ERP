@@ -7,17 +7,17 @@ body {
   overflow: hidden;
 }
 
-.Rcenter {
+.center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
+  width: 450px;
   background: white;
   border-radius: 10px;
 }
 
-.Rcenter h1 {
+.center h1 {
   text-align: center;
   padding: 0 0 20px 0;
   border-bottom: 1px solid silver;
@@ -28,13 +28,13 @@ body {
   box-sizing: border-box;
 }
 
-.Rtxt_field {
+.txt_field {
   position: relative;
   border-bottom: 2px solid #adadad;
   margin: 30px 0;
 }
 
-.Rtxt_field input {
+.txt_field input {
   width: 100%;
   padding: 0 5px;
   height: 40px;
@@ -44,7 +44,7 @@ body {
   outline: none;
 }
 
-.Rtxt_field label {
+.txt_field label {
   position: absolute;
   top: 50%;
   left: 5px;
@@ -55,7 +55,7 @@ body {
   transition: 0.5s;
 }
 
-.Rtxt_field span::before {
+.txt_field span::before {
   content: "";
   position: absolute;
   top: 40px;
@@ -65,19 +65,19 @@ body {
   background: #2691d9;
 }
 
-.Rtxt_field input:focus ~ label,
-.Rtxt_field input:valid ~ label {
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
   top: 5px;
   color: #2691d9;
 }
 
-.Rpass {
+.pass {
   margin: -5px 0 20px 5px;
   color: #a6a6a6;
   cursor: pointer;
 }
 
-.Rpass:hover {
+.pass:hover {
   text-decoration: underline;
 }
 
@@ -99,14 +99,14 @@ button:hover {
   transition: 0.5s;
 }
 
-.Rsignup_link {
+.signup_link {
   margin: 30px 0;
   text-align: center;
   font-size: 16px;
   color: #666666;
 }
 
-.Rreg {
+.reg {
   color: #2691d9;
   text-decoration: none;
 }

@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
 
-const Login = () => {
+const International_Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleSubmit = () => {};
@@ -47,4 +47,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default International_Login;

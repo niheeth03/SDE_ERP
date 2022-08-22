@@ -25,7 +25,8 @@ const Login=()=>{
         </div>
         <div className="pass">Forgot Password?</div>
         <button type="submit"  onClick={handleSubmit}>Submit</button>
-        <div className="signup_link">Not a member? <Link className="reg" to="/register">Register</Link> </div>
+        {/* bad code alert*/}
+        <div className="signup_link">Not a member? <Link className="reg" to="/alumni_portal/register">Register</Link> </div>
         </div>
       </div>
   )

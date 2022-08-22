@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useRef, useState, useEffect } from "react";
+import './style.css'
 
 const Application = () => {
   const [firstname, setFirstname] = useState("");
@@ -84,6 +85,7 @@ const Application = () => {
         <label>
           Gender:
           <select
+            className="custom-select"
             onChange={(e) => {
               setGender(e.target.value);
             }}
@@ -96,6 +98,7 @@ const Application = () => {
         <label>
           Degree:
           <select
+          
             onChange={(e) => {
               setDegree(e.target.value);
             }}
