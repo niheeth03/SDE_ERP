@@ -97,6 +97,7 @@ const Application = () => {
         <br></br>
         <label>
           Degree:
+          </label>
           <select
           
             onChange={(e) => {
@@ -107,10 +108,11 @@ const Application = () => {
             <option value="Masters">Masters</option>
             <option value="Phd">Phd</option>
           </select>
-        </label>
         <br></br>
         <label>
           Department:
+        </label>
+          <div className="select-value">
           <select
             onChange={(e) => {
               setBranch(e.target.value);
@@ -125,7 +127,8 @@ const Application = () => {
             <option value="MA">Maths</option>
             <option value="HS">Humanities and Social Sciences</option>
           </select>
-        </label>
+          </div>
+          
         <button type="submit" onClick={handleSubmit}>
           Submit
         </button>
