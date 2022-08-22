@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const dotenv=require("dotenv");
 const mongoose =require("mongoose");
 const registerRoute =require("./routes/register.js");
-
+const emailRoute=require("./routes/groupEmail.js")
 const User = require("./models/User"); 
 
 mongoose
@@ -17,8 +17,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use("/register", registerRoute);
+app.use("/groupEmail", emailRoute);
 
-
-app.listen("5525",()=>{
+app.listen("5000",()=>{
     console.log("Backend is running");
 });
