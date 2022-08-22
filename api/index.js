@@ -8,7 +8,7 @@ const registerRoute =require("./routes/register.js");
 const User = require("./models/User"); 
 
 mongoose
-    .connect("mongodb+srv://Vibhav:123456@mastercluster.9eqlou1.mongodb.net/alumni?retryWrites=true&w=majority")
+    .connect("mongodb+srv://niheeth23:laxminilayam@mastercluster.9eqlou1.mongodb.net/alumni?retryWrites=true&w=majority")
     .then(console.log("connected to mongoDB"))
     .catch((err)=>console.log(err))
 

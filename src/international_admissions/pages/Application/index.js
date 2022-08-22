@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useRef, useState, useEffect } from "react";
+import './style.css'
 
 const Application = () => {
   const [firstname, setFirstname] = useState("");
@@ -95,6 +96,7 @@ const Application = () => {
         <br></br>
         <label>
           Degree:
+          </label>
           <select
             onChange={(e) => {
               setDegree(e.target.value);
@@ -104,10 +106,11 @@ const Application = () => {
             <option value="Masters">Masters</option>
             <option value="Phd">Phd</option>
           </select>
-        </label>
         <br></br>
         <label>
           Department:
+        </label>
+          <div className="select-value">
           <select
             onChange={(e) => {
               setBranch(e.target.value);
@@ -122,7 +125,8 @@ const Application = () => {
             <option value="MA">Maths</option>
             <option value="HS">Humanities and Social Sciences</option>
           </select>
-        </label>
+          </div>
+          
         <button type="submit" onClick={handleSubmit}>
           Submit
         </button>

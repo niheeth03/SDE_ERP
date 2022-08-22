@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import{Link,useNavigate} from 'react-router-dom'
-import './Register.css'
+import './index.css'
 import moment, { calendarFormat } from 'moment';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
@@ -60,7 +60,7 @@ const onDateChange = (newDate) => {
             <input type="text" className="registerInput" placeholder="Enter Username...."   onChange={(e)=>setUsername(e.target.value)}></input>
             <label>Email</label>
             <input type="email" className="registerInput" placeholder="Enter your Email...." onChange={(e)=>setEmail(e.target.value)}></input>
-            <p>{this.state.selectedDate.format('YYYY-MM-DD')}</p>
+            {/* <p>{this.state.selectedDate.format('YYYY-MM-DD')}</p> */}
             <div className='calendar-container'>
                 <Calendar  />
             </div>
