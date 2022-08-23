@@ -4,26 +4,25 @@ import axios from 'axios'
 const GroupEmail = () => {
   
   const [msg,setMsg] = useState('');
-  const [user, setUser] = useState({
-    to: "",
-    subject: "",
-    description: ""
-  });
- 
-  const { to, subject, description} = user;
-  const onInputChange = e => {
-    setUser({ ...user, [e.target.name]: e.target.value });
-  };
- 
-  const onSubmit = async e => {
-    e.preventDefault();
-    await axios.post("http://localhost:5000/users/",user)
-   .then(response => setMsg(response.data.respMesg));
+  const [to,setTo]=useState('');
+  const [subject,setSubject]=useState('');
+  const [description,setDescription]=useState('');
+
+
+
+  const onSubmit = async(e) => {
+    console.log("email");
+    const user={
+        to: to,
+        subject:subject,
+        description:description
+      };
+    await axios.post("/groupEmail",user)
+    .then(response => setMsg(response.data.respMesg))
+    .catch(err =>console.log(err));
   };
   return (
     <div className="container">
-         <h3 className="text-center text-success mb-2 mt-4">Email Send using React and Node </h3>
-         <h6 className="text-secondary text-center mb-4 mt-1">By Improve Programming Logic</h6>
       <div class="row">  
       
        <div className="col-sm-4 mx-auto shadow p-5">
@@ -35,8 +34,7 @@ const GroupEmail = () => {
               className="form-control form-control-lg"
               placeholder="To"
               name="to"
-              onChange={onInputChange}
-              value={user.to}
+              onChange={(e)=>{setTo(e.target.value);}}
             />
           </div>
           <div className="form-group  mb-4 ">
@@ -45,7 +43,7 @@ const GroupEmail = () => {
               className="form-control form-control-lg"
               placeholder="Subject"
               name="subject"
-              onChange={onInputChange}
+              onChange={(e)=>{setSubject(e.target.value);}}
               value={subject}
             />
           </div>
@@ -55,7 +53,7 @@ const GroupEmail = () => {
               className="form-control form-control-lg"
               placeholder="Description"
               name="description"
-              onChange={onInputChange}
+              onChange={(e)=>{setDescription(e.target.value);}}
               value={description}
             />
           </div>

@@ -19,6 +19,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use("/register", registerRoute);
 app.use("/groupEmail", emailRoute);
 
-app.listen("5000",()=>{
+app.listen("3080",()=>{
     console.log("Backend is running");
 });
