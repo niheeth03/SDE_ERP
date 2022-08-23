@@ -1,13 +1,13 @@
-// import { useRef, useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
-// import "./index.css";
+import { useRef, useState, useEffect } from "react";
+import {Link} from "react-router-dom";
+import './index.css'
 
+const Login=()=>{
+  const [email,setEmail]=useState("");
+  const [password,setPassword]=useState("");
+  const handleSubmit=()=>{
 
-const International_Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const handleSubmit = () => {};
-
+  }
   return (
     
       <div className="center">
@@ -33,5 +33,4 @@ const International_Login = () => {
   )
 }
 
-
-export default International_Login;
+export default Login;
