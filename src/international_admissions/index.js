@@ -4,8 +4,11 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 const International_admissions = () => {
   return (
     <div>
+
+
       <Link to="login" style={{color: 'white', margin: '2% 3%', fontSize: '125%', textDecoration: 'none', postion: 'relative', float: 'right'}}>Login</Link> 
       <Link to="register" style={{color: 'white', margin: '2% 0', fontSize: '125%', textDecoration: 'none', postion: 'relative', float: 'right'}}>Register</Link> 
+
       {/* Routes must be changes */}
       <div style={{textAlign: 'center', color: 'white', padding: '20% 0'}}>
         <h1 style={{fontSize: '300%'}}>

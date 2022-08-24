@@ -85,6 +85,7 @@ const Application = () => {
         <label>
           Gender:
           <select
+            className="custom-select"
             onChange={(e) => {
               setGender(e.target.value);
             }}
@@ -98,6 +99,7 @@ const Application = () => {
           Degree:
           </label>
           <select
+          
             onChange={(e) => {
               setDegree(e.target.value);
             }}
