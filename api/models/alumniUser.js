@@ -1,4 +1,5 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
+const { db } = require("./intladmUser");
 
 
 const UserSchema= mongoose.Schema({
