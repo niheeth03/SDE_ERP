@@ -13,6 +13,9 @@ import International_Login from "./international_admissions/pages/Login/index";
 import International_Register from "./international_admissions/pages/Register/index";
 import Application_Status from "./international_admissions/pages/Status/index";
 import Offers from "./international_admissions/pages/Offers/index"
+import Email from "./online_alerts/pages/groupEmail/groupEmail"
+import Sms  from "./online_alerts/pages/sms/sms"
+
 
 
 function App() {
@@ -37,6 +40,8 @@ function App() {
             <Route path='international_admissions/register' element={<International_Register/>}/>
             <Route path='international_admissions/application_status'  element={<Application_Status/>}/>
             <Route path='international_admissions/offers' element={<Offers/>}/>
+            <Route path='online_alerts/email' element={<Email/>}/>
+            <Route path='online_alerts/sms' element={<Sms/>}/>
         </Routes>
 
 
