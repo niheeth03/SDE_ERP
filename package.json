@@ -11,6 +11,7 @@
     "body-parser": "^1.20.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "express-session": "^1.17.3",
     "moment": "^2.29.4",
@@ -21,6 +22,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "twilio": "^3.80.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

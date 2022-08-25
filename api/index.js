@@ -7,9 +7,10 @@ const cookieParser=require("cookie-parser");
 const session=require("express-session");
 const cors=require("cors");
 const registerRoute =require("./routes/alumniRegister.js");
-const loginRoute=require("./routes/alumniLogin.js");
-const emailRoute=require("./routes/groupEmail.js");
 
+const emailRoute=require("./routes/groupEmail.js");
+const smsRoute=require("./routes/sms.js")
+const User = require("./models/alumniUser"); 
 
 
 mongoose
@@ -22,6 +23,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use("/register", registerRoute);
 app.use("/login", loginRoute);
+app.use("/groupEmail", emailRoute);
+app.use("/sms",smsRoute);
+
 
 app.listen(3080,()=>{
     console.log("Backend is running");
