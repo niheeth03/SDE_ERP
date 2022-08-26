@@ -9,8 +9,8 @@ const cors=require("cors");
 
 
 router.use(cors({
-    origin:["https://localhost:3000/login"],
-    methos:["GET","POST"],
+    origin:["https://localhost:3000/*"],
+    methods:["GET","POST"],
     credentials: true,
 }))
 router.use(cookieParser());
@@ -28,7 +28,14 @@ router.use(
 
 router.get("/",(req,res)=>{
     if(req.session.user){
-        res.send({loggedIn: true,user: req.session.user})
+        const response={loggedIn: true,user: req.session.user}
+      //  const myResponse=JSON.stringify(response)
+      ///console logs
+        console.log("Calling from alumniLogin GET API")
+        for(let x in response){if(x=="loggedIn")console.log(true);console.log(response[x]);}
+      //  console.log("GET"+myResponse.user);
+        /////
+        res.send(response);
     }
     else{
         res.send({loggedIn: false});
@@ -38,30 +45,18 @@ router.get("/",(req,res)=>{
 router.post("/",async (req,res)=>{
     const email=req.body.email;
     const password=req.body.password;
-
-   /* const curData=await User.find({email: email});
-    if(curData.length > 0){
-        bcrypt.compare(password,curData[0].password,(err,response)=>{
-            if(response){
-                req.session.user= result;
-                console.log(req.session.user);
-                res.send("Correct combination");
-            }
-            else{
-                res.send("Please check your Username/Password");
-            }
-        })
-
-
-    }
-    else res.send("Please check your Username/Password");*/
-   // res.send(curData);
-   User.find({email:email},(err,result)=>{
+    User.find({email:email},(err,result)=>{
     if(result.length>0){
         bcrypt.compare(password,result[0].password,(err,response)=>{
             if(response){
-                req.session.user= result;
-                console.log(result.message);
+                req.session.user = result[0].email;
+
+                ////////consoles
+                console.log(req.session.user);
+                console.log("hello" + result[0].email);
+                console.log(result);
+                ///////////
+
                 res.send(result);
             }
             else{
@@ -78,3 +73,23 @@ router.post("/",async (req,res)=>{
 });
 
 module.exports=router
+
+
+
+/* const curData=await User.find({email: email});
+    if(curData.length > 0){
+        bcrypt.compare(password,curData[0].password,(err,response)=>{
+            if(response){
+                req.session.user= result;
+                console.log(req.session.user);
+                res.send("Correct combination");
+            }
+            else{
+                res.send("Please check your Username/Password");
+            }
+        })
+
+
+    }
+    else res.send("Please check your Username/Password");*/
+   // res.send(curData);

@@ -1,9 +1,12 @@
 import axios from "axios";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect} from "react";
+import {useNavigate} from "react-router-dom"
 import {Link} from "react-router-dom";
+//import Userprofile from "../../userprofile.js"
 import './style.css'
 
 const Login=()=>{
+  const navigate= useNavigate();
   const [email,setEmail]=useState("");
   const [password,setPassword]=useState("");
   const [loginStatus,setLoginStatus]= useState("");
@@ -14,8 +17,8 @@ const Login=()=>{
        password: password,
      }
      axios.post("/login",Login_Data).then((res)=>{
-      if(res.data.message){setLoginStatus(res.data.message);console.log(loginStatus);console.log("Correct combination");}
-      else {setLoginStatus(res.data[0].email);console.log(loginStatus);console.log("Correct combination2");}
+      if(res.data.message){setLoginStatus(res.data.message);console.log(loginStatus);console.log("You are not logged in");}
+      else {setLoginStatus(res.data[0].email);console.log("Calling from alum_login POST Aprroved");console.log("Correct combination2");console.log(loginStatus);navigate("../payments")}
      });
   }
   return (
@@ -44,3 +47,6 @@ const Login=()=>{
 }
 
 export default Login;
+
+
+//  Userprofile.setUser(res.data[0].email);
