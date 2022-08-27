@@ -15,12 +15,8 @@ router.post("/",async(req,res)=>{
         console.log("hello");
         const hashedPass=await bcrypt.hash(req.body.password,salt);
         req.body.password = hashedPass;
-       // console.log("hello");
         const newUser=new User(req.body);
-       // console.log(req.body);
-       // console.log(newUser);
         const user=await newUser.save();
-       // console.log("hello");
         res.status(200);
         console.log(user);
         res.send(user);
