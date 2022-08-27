@@ -17,8 +17,9 @@ const Login=()=>{
        password: password,
      }
      axios.post("/login",Login_Data).then((res)=>{
-      if(res.data.message){setLoginStatus(res.data.message);console.log(loginStatus);console.log("You are not logged in");}
-      else {setLoginStatus(res.data[0].email);console.log("Calling from alum_login POST Aprroved");console.log("Correct combination2");console.log(loginStatus);navigate("../payments")}
+       console.log(res);
+      if(res.data.msg){setLoginStatus(res.data.message);console.log(loginStatus);console.log("You are not logged in");}
+      else {setLoginStatus(res.data[0].email);console.log("Calling from alumni_login POST Aprroved");console.log("Correct combination2");console.log(loginStatus);navigate("../payments")}
      });
   }
   return (

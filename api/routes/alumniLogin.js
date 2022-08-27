@@ -46,6 +46,8 @@ router.post("/",async (req,res)=>{
     const email=req.body.email;
     const password=req.body.password;
     User.find({email:email},(err,result)=>{
+    console.log(result);
+    console.log()
     if(result.length>0){
         bcrypt.compare(password,result[0].password,(err,response)=>{
             if(response){
@@ -60,13 +62,13 @@ router.post("/",async (req,res)=>{
                 res.send(result);
             }
             else{
-                console.log("error");
+                console.log("error1");
                 res.send({msg:"Please check your Username/Password"});
             }
         })
     }
     else{
-        console.log("error");
+        console.log("error2");
         res.send({msg:"Please check your Username/Password"});
     }
    });

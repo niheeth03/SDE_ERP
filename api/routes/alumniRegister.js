@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 
 router.get("/", (req, res)=>{
     console.log("open");   
-    res.send("helo"); 
+    res.send("hello"); 
 })
 
 router.post("/",async(req,res)=>{
