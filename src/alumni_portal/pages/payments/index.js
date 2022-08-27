@@ -9,28 +9,32 @@ import {
 import axios from "axios";
 //import Userprofile from "../../userprofile";
 import {useState,useEffect,useRef} from "react";
+import Login from "../login";
 
-
+import {useNavigate} from "react-router-dom"
 
 
 
 const Alumni_payments=()=>{
-    const userName=useRef("");
-    const loggedIn=useRef(false);
-    axios.defaults.withCredentials=true;
+  const navigate=useNavigate();
+  const userName=useRef("");
+  const loggedIn=useRef(false);
+  const [Login,setLogin]=useState(false);
+  const [UserName,setUser]=useState(false);
+  axios.defaults.withCredentials=true;
     
 
 
 useEffect(()=>{
-console.log("In use effect")
+  console.log("In use effect")
  axios.get("../../login").then(
   (res)=>{
     console.log("RESPONSE"+res)
  for(let x in res){
-   if(x==="data"){console.log("DATA"+res[x]);
+   if(x=="data"){console.log("DATA"+res[x]);
    console.log(JSON.stringify(res[x]));
 
-   for(let y in res[x]){if(y==="user")userName.current=res[x][y];else loggedIn.current=res[x][y];};
+   for(let y in res[x]){if(y=="user")setUser(res[x][y]);else setLogin(res[x][y]);};
   }
    
    
@@ -39,6 +43,8 @@ console.log("In use effect")
  }).catch(console.log("errorrrr"));},[])
 console.log("Calling from alumni_payments");
 console.log(userName);
+if(Login){
+  
 return(
 <div class="container py-5"> 
 <div class="row mb-4">
@@ -100,7 +106,11 @@ return(
 </div>
 
 
-)
+)}
+
+else{
+  navigate("./../login");
+}
 
 
 }

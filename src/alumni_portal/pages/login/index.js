@@ -10,14 +10,16 @@ const Login=()=>{
   const [email,setEmail]=useState("");
   const [password,setPassword]=useState("");
   const [loginStatus,setLoginStatus]= useState("");
+  const [Error,setError]=useState(false);
   axios.defaults.withCredentials=true;
-  const handleSubmit=()=>{
+  const handleSubmit=async(e)=>{
      const Login_Data={
        email: email,
        password: password,
      }
-     axios.post("/login",Login_Data).then((res)=>{
-      if(res.data.message){setLoginStatus(res.data.message);console.log(loginStatus);console.log("You are not logged in");}
+     e.preventDefault();
+     await axios.post("/login",Login_Data).then((res)=>{
+      if(res.data.message){setError(true);console.log(loginStatus);console.log("You are not logged in");}
       else {setLoginStatus(res.data[0].email);console.log("Calling from alum_login POST Aprroved");console.log("Correct combination2");console.log(loginStatus);navigate("../payments")}
      });
   }
@@ -40,7 +42,7 @@ const Login=()=>{
         <button type="submit"  onClick={handleSubmit}>Submit</button>
         {/* bad code alert*/}
         <div className="signup_link">Not a member? <Link className="reg" to="/alumni_portal/register">Register</Link> </div>
-        <h1>{loginStatus}</h1>
+        {Error && <span style={{color:"red" ,marginTop:"10px"}}>Something went wrong!</span>}
         </div>
       </div>
   )
