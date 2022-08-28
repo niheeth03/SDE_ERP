@@ -21,8 +21,8 @@ mongoose
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use("/register", registerRoute);
-app.use("/login", loginRoute);
+app.use("/alumni_portal/register", registerRoute);
+app.use("/alumni_portal/login", loginRoute);
 app.use("/groupEmail", emailRoute);
 app.use("/sms",smsRoute);
 

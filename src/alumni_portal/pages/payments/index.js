@@ -28,7 +28,7 @@ const Alumni_payments=()=>{
 
 useEffect(()=>{
   console.log("In use effect")
- axios.get("../../login").then(
+ axios.get("./login").then(
   (res)=>{
     console.log("RESPONSE"+res)
  for(let x in res){
@@ -110,7 +110,7 @@ return(
 )}
 
 else{
-  navigate("./../login");
+  return<>"hello"</>;
 }
 
 

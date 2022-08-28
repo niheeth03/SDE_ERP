@@ -9,6 +9,7 @@ import {
 const Alumni_portal = () => {
   return (
     <div>
+
       <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="">IITT_Alumni</a>
@@ -28,8 +29,20 @@ const Alumni_portal = () => {
         <Link to="">Home </Link>
         <Link to="payments">Payments</Link>
       </nav>
-      <Outlet />
-    </div>
+
+<nav class="navbar navbar-light justify-content-center " >
+<ul class="nav justify-content-center" >
+  <li class="nav-item"  >
+    <a class="nav-link active"  href="#">Home</a>
+  </li>
+  <li class="nav-item"  >
+    <a class="nav-link" href="#">Payments</a>
+  </li>
+  
+</ul>
+</nav>
+    
+</div>
   );
 };
 

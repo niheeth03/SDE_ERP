@@ -1,5 +1,12 @@
+
 .applica{
   width : 70%;
+  background: url("./../../../../images/IITTP.jfif");
+  background-size: cover;
+}
+
+.center {
+
   position: absolute;
   top: 90%;
   left: 50%;

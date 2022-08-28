@@ -26,6 +26,7 @@ const Application = () => {
 
   return (
 
+
     <div class="applica">
       <form action="" className="farm" onSubmit={handleSubmit}>
           <h2><b>Application</b></h2>
@@ -398,6 +399,8 @@ const Application = () => {
           <td>
           <br/>
           <table>
+    
+
           
           <tr>
           <td align="center"><b>Sl.No.</b></td>
@@ -457,6 +460,7 @@ const Application = () => {
           I am aware of all guidelines and all the details procured above are true to my knowledge.
         </label>
       </div>
+
       <br/>
       <button type="submit" class="btn btn-success">Submit</button><br/><br/>
       <button type="submit" class="btn btn-danger">Cancel</button>
@@ -464,8 +468,11 @@ const Application = () => {
       
 
       {Error && <span style={{color:"red" ,marginTop:"10px"}}>Something went wrong!</span>}
+
+
     </div>
   );
 };
 
 export default Application;
+
