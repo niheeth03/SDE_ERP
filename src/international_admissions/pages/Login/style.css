@@ -1,7 +1,17 @@
-.applica{
-  width : 70%;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: montserrat;
+  background: url("C:\Users\chakr\OneDrive\Desktop\1522997066755.jfif");
+  opacity: 100%;
+  background-position-x: center;
+  height: 100vh;
+}
+
+.total{
+  width : 27%;
   position: absolute;
-  top: 90%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 4px;
@@ -10,6 +20,10 @@
   overflow: auto;
 }
 
+/* button{
+  width: 30%;
+  align-items: center;
+} */
 
 button {
   width: 30%;
