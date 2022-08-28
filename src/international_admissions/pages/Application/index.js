@@ -29,96 +29,72 @@ const Application = () => {
   };
 
   return (
-    <div className="center">
+    <div class="card bg-transparent">
+      
       <h1>Application</h1>
+      <article class="card-body mx-auto">
+      <form>
       <div className="form">
-        <div className="txt_field">
-          <input
-            type="text"
-            onChange={(e) => {
-              setFirstname(e.target.value);
-            }}
-          />
-          <span></span>
-          <label>First Name </label>
-        </div>
-        <div className="txt_field">
-          <input
-            type="text"
-            onChange={(e) => {
-              setMiddlename(e.target.value);
-            }}
-          />
-          <span></span>
-          <label>Middle Name </label>
-        </div>
-        <div className="txt_field">
-          <input
-            type="text"
-            onChange={(e) => {
-              setLastname(e.target.value);
-            }}
-          />
-          <span></span>
-          <label>Last Name </label>
-        </div>
-        <div className="txt_field">
-          <input
-            type="text"
-            onChange={(e) => {
-              setMobileNumber(e.target.value);
-            }}
-          />
-          <span></span>
-          <label>Mobile Number </label>
-        </div>
-        <div className="txt_field">
-          <input
-            type="email"
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          />
-          <span></span>
-          <label>Email</label>
-        </div>
-        <label>
-          Gender:
-          <select
-            className="custom-select"
-            onChange={(e) => {
-              setGender(e.target.value);
-            }}
-          >
-            <option value="Female">Female</option>
-            <option value="Male">Male</option>
-          </select>
-        </label>
-        <br></br>
-        <label>
-          Degree:
-          </label>
-          <select
-          
-            onChange={(e) => {
-              setDegree(e.target.value);
-            }}
-          >
-            <option value="Bachelors">Bachelors</option>
-            <option value="Masters">Masters</option>
-            <option value="Phd">Phd</option>
-          </select>
-        <br></br>
-        <label>
-          Department:
-        </label>
-          <div className="select-value">
-          <select
-            onChange={(e) => {
-              setBranch(e.target.value);
-            }}
-          >
-            <option value="CH">Chemical</option>
+      <div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		 </div>
+        <input name="" class="form-control" placeholder="First name" type="text" onChange={(e) => {setFirstname(e.target.value);}} />
+    </div> 
+    <div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		 </div>
+        <input name="" class="form-control" placeholder="Middle name" type="text" onChange={(e) => {setMiddlename(e.target.value);}} />
+    </div> 
+    <div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		 </div>
+        <input name="" class="form-control" placeholder="Last name" type="text" onChange={(e) => {setLastname(e.target.value);}} />
+    </div> 
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="" class="form-control" placeholder="Email address" type="email" onChange={(e) => {setEmail(e.target.value);}} />
+    </div> 
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+		</div>
+		
+    	<input name="" class="form-control" placeholder="Mobile number"  type="text" onChange={(e) => {setMobileNumber(e.target.value);}} />
+    </div> 
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		</div>
+		<select class="form-control" onChange={(e) => {setGender(e.target.value);}}>
+			<option selected=""> Select Gender</option>
+			<option>Male</option>
+			<option>Female</option>
+			<option>Other</option>
+		</select>
+	</div> 
+  <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+		</div>
+		<select class="form-control" onChange={(e) => {setDegree(e.target.value);}}>
+			<option selected=""> Select Degree</option>
+      <option value="Bachelors">Bachelors</option>
+      <option value="Masters">Masters</option>
+      <option value="Phd">Phd</option>
+		</select>
+	</div> 
+  <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+		</div>
+		<select class="form-control" onChange={(e) => {setGender(e.target.value);}}>
+			<option selected=""> Select Branch</option>
+      <option value="CH">Chemical</option>
             <option value="CSE">Computer Science</option>
             <option value="CE">Civil</option>
             <option value="EE">Electrical</option>
@@ -126,15 +102,21 @@ const Application = () => {
             <option value="PH">Physics</option>
             <option value="MA">Maths</option>
             <option value="HS">Humanities and Social Sciences</option>
-          </select>
-          </div>
+		</select>
+	</div>      
           
         <button type="submit" onClick={handleSubmit}>
           Submit
         </button>
       </div>
+      </form>
+      </article>
     </div>
   );
 };
 
 export default Application;
+
+
+
+

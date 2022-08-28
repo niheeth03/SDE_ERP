@@ -35,7 +35,7 @@ function App() {
 
 
             <Route path='international_admissions' element={<International_admissions/>}/>
-            <Route path='international_admissions/application' element={<International_Application />}/>
+            <Route path='international_admissions/application' element={<International_Application/>}/>
             <Route path='international_admissions/login' element={<International_Login/>}/>
             <Route path='international_admissions/register' element={<International_Register/>}/>
             <Route path='international_admissions/application_status'  element={<Application_Status/>}/>
