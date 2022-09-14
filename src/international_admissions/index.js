@@ -4,17 +4,27 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 const International_admissions = () => {
   return (
     <div>
-
-
-      <Link to="login" style={{color: 'white', margin: '2% 3%', fontSize: '125%', textDecoration: 'none', postion: 'relative', float: 'right'}}>Login</Link> 
-      <Link to="register" style={{color: 'white', margin: '2% 0', fontSize: '125%', textDecoration: 'none', postion: 'relative', float: 'right'}}>Register</Link> 
-
+      <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="">International Admissions</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="international_admissions/login">Login</a>
+              <a class="nav-link" href="international_admissions/register">Register</a>
+            </div>
+          </div>
+        </div>
+      </nav>
       {/* Routes must be changes */}
-      <div style={{textAlign: 'center', color: 'white', padding: '20% 0'}}>
-        <h1 style={{fontSize: '300%'}}>
+      
+      <div style={{textAlign: 'center',padding: '20% 0'}}>
+        <h1 class="text-dark bg-light"  >
           About International Admissions
-      </h1>
-        <p style={{fontSize: '120%', padding: '0 20%'}}>
+        </h1>
+        <p class="text-dark center bg-light">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque recusandae magnam, ea earum voluptas voluptatem soluta odit facere, totam natus eligendi! Ullam est inventore modi nam recusandae eum necessitatibus tempore!
       </p>
       </div>

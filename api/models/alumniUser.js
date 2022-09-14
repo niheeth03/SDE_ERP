@@ -1,6 +1,4 @@
 const mongoose = require("mongoose");
-const { db } = require("./intladmUser");
-
 
 const UserSchema= mongoose.Schema({
     name:{
@@ -44,5 +42,5 @@ const UserSchema= mongoose.Schema({
     
 },{timestamps:true})
 
-const UserModel = mongoose.model("alumniUser",UserSchema);
+const UserModel = mongoose.model("users",UserSchema);
 module.exports = UserModel;

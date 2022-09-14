@@ -58,7 +58,7 @@ const GroupEmail = () => {
             />
           </div>
           
-          <button onClick={onSubmit} className="btn btn-primary btn-block " style={{marginLeft:"100px"}}>Send Mail</button>
+          <button type="button" onClick={onSubmit} class="btn btn-secondary">Send Mail</button>
        
       </div>
     </div>

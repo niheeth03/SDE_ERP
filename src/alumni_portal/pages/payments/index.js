@@ -10,6 +10,7 @@ import axios from "axios";
 //import Userprofile from "../../userprofile";
 import {useState,useEffect,useRef} from "react";
 import Login from "../login";
+import './styles.css'
 
 import {useNavigate} from "react-router-dom"
 
@@ -27,7 +28,7 @@ const Alumni_payments=()=>{
 
 useEffect(()=>{
   console.log("In use effect")
- axios.get("../../login").then(
+ axios.get("./login").then(
   (res)=>{
     console.log("RESPONSE"+res)
  for(let x in res){
@@ -46,7 +47,7 @@ console.log(userName);
 if(Login){
   
 return(
-<div class="container py-5"> 
+<div class="total"> 
 <div class="row mb-4">
 <div class="col-lg-8 mx-auto text-center">
     <h1 class="display-6"> Payment </h1>
@@ -109,7 +110,7 @@ return(
 )}
 
 else{
-  navigate("./../login");
+  return<>"hello"</>;
 }
 
 
