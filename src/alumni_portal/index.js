@@ -18,8 +18,8 @@ const Alumni_portal = () => {
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="alumni_portal/login">Login</a>
-              <a class="nav-link active" aria-current="page" href="alumni_portal/register">Register</a>
+              <a class="nav-link active" aria-current="page" href="./login">Login</a>
+              <a class="nav-link active" aria-current="page" href="./register">Register</a>
               <a class="nav-link" href="alumni_portal/payments">Payments</a>
             </div>
           </div>
@@ -29,7 +29,7 @@ const Alumni_portal = () => {
         <Link to="">Home </Link>
         <Link to="payments">Payments</Link>
       </nav>
-
+      <Outlet/>
 <nav class="navbar navbar-light justify-content-center " >
 <ul class="nav justify-content-center" >
   <li class="nav-item"  >
