@@ -1,4 +1,4 @@
-const User = require("../models/alumniUser.js");
+const alumniUser = require("../models/alumniUser.js");
 const router=require("express").Router();
 const bcrypt = require('bcrypt');
 
@@ -45,9 +45,9 @@ router.get("/",(req,res)=>{
 router.post("/",async (req,res)=>{
     const email=req.body.email;
     const password=req.body.password;
-    User.find({email:email},(err,result)=>{
+    alumniUser.find({email:email},(err,result)=>{
     console.log(result);
-    console.log()
+    console.log(err);
     if(result.length>0){
         bcrypt.compare(password,result[0].password,(err,response)=>{
             if(response){

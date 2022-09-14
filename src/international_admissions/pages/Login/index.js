@@ -1,12 +1,26 @@
+import axios from "axios";
 import { useRef, useState, useEffect } from "react";
+import {useNavigate} from "react-router-dom"
 import {Link} from "react-router-dom";
 import './index.css'
 
 const Login=()=>{
+  const navigate= useNavigate();
   const [email,setEmail]=useState("");
   const [password,setPassword]=useState("");
-  const handleSubmit=()=>{
-
+  const [loginStatus,setLoginStatus]= useState("");
+  const [Error,setError]=useState(false);
+  axios.defaults.withCredentials=true;
+  const handleSubmit=async(e)=>{
+    const intl_login_Data={
+      email: email,
+      password: password,
+    }
+    e.preventDefault();
+     await axios.post("/login",intl_login_Data).then((res)=>{
+      if(res.data.message){setError(true);console.log(loginStatus);console.log("You are not logged in");}
+      else {setLoginStatus(res.data[0].email);console.log("Calling from alum_login POST Aprroved");console.log("Correct combination2");console.log(loginStatus);navigate("../payments")}
+     });
   }
   return (
     

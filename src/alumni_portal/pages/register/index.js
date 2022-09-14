@@ -30,7 +30,7 @@ const handleSubmit=()=>{
       password: password
     };
     console.log("Were");
-    axios.post("/register",newStudent);
+    axios.post("/alumni/register",newStudent);
   }
 
 const handleCPassword = (e) => {
