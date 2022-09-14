@@ -9,6 +9,7 @@ import {
 import axios from "axios";
 //import Userprofile from "../../userprofile";
 import {useState,useEffect,useRef} from "react";
+import Login from "../login";
 
 
 
@@ -17,6 +18,8 @@ import {useState,useEffect,useRef} from "react";
 const Alumni_payments=()=>{
     const userName=useRef("");
     const loggedIn=useRef(false);
+    const [Login,setLogin]=useState(false);
+    const [UserName,setUser]=useState(false);
     axios.defaults.withCredentials=true;
     
 
@@ -30,7 +33,7 @@ useEffect(()=>{
    if(x=="data"){console.log("DATA"+res[x]);
    console.log(JSON.stringify(res[x]));
 
-   for(let y in res[x]){if(y=="user")userName.current=res[x][y];else loggedIn.current=res[x][y];};
+   for(let y in res[x]){if(y=="user")setUser(res[x][y]);else setLogin(res[x][y]);};
   }
    
    
@@ -39,7 +42,7 @@ useEffect(()=>{
  }).catch(console.log("errorrrr"));},[])
 console.log("Calling from alumni_payments");
 console.log(userName);
-if(loggedIn.current){return <>{userName.current}</> } 
+if(Login){return <>{UserName}</> } 
   else{return <>Welcome to payments page</>}
  
 
