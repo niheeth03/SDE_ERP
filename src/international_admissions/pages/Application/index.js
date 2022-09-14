@@ -417,7 +417,7 @@ const Application = () => {
           <td><input type="text" name="ClassX_Board" maxlength="30" required/></td>
           <td><input type="text" name="ClassX_Percentage" maxlength="30" required/></td>
           <td><input type="text" name="ClassX_YrOfPassing" maxlength="30" required/></td>
-          <td><input type="file" name="fileToUpload" id="fileToUpload" required/>(upto 50kb allowed)<br/></td>
+          <td><input type="file" name="fileToUpload" id="fileToUpload" required/><br/></td>
           </tr>
           
           <tr>
@@ -426,7 +426,7 @@ const Application = () => {
           <td><input type="text" name="ClassXII_Board" maxlength="30" required/></td>
           <td><input type="text" name="ClassXII_Percentage" maxlength="30" required/></td>
           <td><input type="text" name="ClassXII_YrOfPassing" maxlength="30" required/></td>
-          <td><input type="file" name="fileToUpload" id="fileToUpload" required/>(upto 50kb allowed)<br/></td>
+          <td><input type="file" name="fileToUpload" id="fileToUpload" required/><br/></td>
           </tr>
           
           <tr>
@@ -435,7 +435,7 @@ const Application = () => {
           <td><input type="text" name="Graduation_Board" maxlength="30" /></td>
           <td><input type="text" name="Graduation_Percentage" maxlength="30" /></td>
           <td><input type="text" name="Graduation_YrOfPassing" maxlength="30" /></td>
-          <td><input type="file" name="fileToUpload" id="fileToUpload"/>(upto 50kb allowed)<br/></td>
+          <td><input type="file" name="fileToUpload" id="fileToUpload"/><br/></td>
           </tr>
           
           <tr>
@@ -444,7 +444,7 @@ const Application = () => {
           <td><input type="text" name="Masters_Board" maxlength="30" /></td>
           <td><input type="text" name="Masters_Percentage" maxlength="30" /></td>
           <td><input type="text" name="Masters_YrOfPassing" maxlength="30" /></td>
-          <td><input type="file" name="fileToUpload" id="fileToUpload"/>(upto 50kb allowed)<br/></td>
+          <td><input type="file" name="fileToUpload" id="fileToUpload"/><br/></td>
           </tr>
           
           </table>

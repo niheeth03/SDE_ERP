@@ -1,11 +1,19 @@
+body{
+  overflow: visible;
+}
 
 .applica{
   width : 70%;
-  background: url("./../../../../images/IITTP.jfif");
-  background-size: cover;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+  background-color: #f2f2f2;
+  padding: 20px;
 }
 
-.center {
+/*.center {
 
   position: absolute;
   top: 90%;
@@ -15,7 +23,7 @@
   background-color: #f2f2f2;
   padding: 20px;
   overflow: auto;
-}
+}*/
 
 
 button {

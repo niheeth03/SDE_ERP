@@ -376,7 +376,7 @@ function Register() {
 
         {/* <button type="submit" class="btn btn-primary">Login</button> */}
         </form>
-        <button type="submit" class="btn btn-success">Register</button><br/>
+        <button type="submit" class="btn btn-primary">Register</button><br/>
         <label for="inputEmail3" class="col-sm-2 col-form-label">Already_a_user?</label>
               <button type="button" class="btn btn-link"><Link to="/login" className="link">Login</Link></button>
             

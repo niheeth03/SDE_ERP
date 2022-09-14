@@ -10,7 +10,7 @@ const Alumni_portal = () => {
   return (
     <div>
 
-      <nav class="navbar navbar-expand-lg bg-dark">
+      <nav class="navbar navbar-expand-lg bg-white">
         <div class="container-fluid">
           <a class="navbar-brand" href="">IITT_Alumni</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,12 +25,12 @@ const Alumni_portal = () => {
           </div>
         </div>
       </nav>
-      <nav>
+      {/* <nav>
         <Link to="">Home </Link>
         <Link to="payments">Payments</Link>
-      </nav>
+      </nav> */}
       <Outlet/>
-<nav class="navbar navbar-light justify-content-center " >
+{/* <nav class="navbar navbar-light justify-content-center " >
 <ul class="nav justify-content-center" >
   <li class="nav-item"  >
     <a class="nav-link active"  href="#">Home</a>
@@ -40,7 +40,7 @@ const Alumni_portal = () => {
   </li>
   
 </ul>
-</nav>
+</nav> */}
     
 </div>
   );

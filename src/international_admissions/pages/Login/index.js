@@ -25,7 +25,7 @@ const Login=()=>{
           <input type="password" class="form-control" id="inputPassword3"required onChange={(e)=>{setPassword(e.target.value);}}/>
         </div>
       </div>
-      <button type="submit" class="btn btn-success" onClick={handleSubmit}>Login</button>
+      <button type="submit" class="btn btn-primary" onClick={handleSubmit}>Login</button>
       {/* <button type="submit" class="btn btn-primary">Login</button> */}
     </form>
   {/* <h2>Login</h2>
