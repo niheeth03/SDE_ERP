@@ -19,8 +19,8 @@ router.post("/",async(req,res)=>{
         const newUser=new User(req.body);
        // console.log(req.body);
         console.log(newUser);
-        const user=await newUser.save();
-       // console.log("hello");
+        const user=await newUser.save().catch((err)=>console.log(err));
+       console.log("hello after save");
         res.status(200);
         console.log(user);
         res.send(user);

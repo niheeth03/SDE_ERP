@@ -25,10 +25,9 @@ const Alumni_portal = () => {
             {/* </div>
           </div> */}
           <Link to="" class="nav-link">Home</Link>
-          <Link to="payments" class="nav-link">Payments</Link>
           <Link to="register" class="nav-link active">Register</Link>
           <Link to="login" class="nav-link active">Login</Link>
-
+          <Link to="payments" class="nav-link">Payments</Link>
         </div>
       </nav>
       {/* <nav>
