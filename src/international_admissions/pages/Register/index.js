@@ -31,7 +31,6 @@ function Register() {
       middleName: middleName,
       lastName: lastName,
       password: password,
-      mobileNumber: mobileNumber,
       gender: gender,
       email: email,
       degree: degree,
