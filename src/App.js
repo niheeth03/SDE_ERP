@@ -16,7 +16,7 @@ import Offers from "./international_admissions/pages/Offers/index"
 import Online_alerts from "./online_alerts/index"
 import Email from "./online_alerts/pages/groupEmail/groupEmail"
 import Sms from "./online_alerts/pages/sms/sms"
-
+import Certificates from "./cce/pages/Certificates/index"
 
 
 function App() {
@@ -46,6 +46,7 @@ function App() {
              <Route path='email' element={<Email/>} />
              <Route path='sms' element={<Sms />} />
           </Route>
+          <Route path='cce/certificates' element={<Certificates/>}/>
         </Routes>
 
 
