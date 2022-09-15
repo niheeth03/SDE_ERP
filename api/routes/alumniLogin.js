@@ -9,7 +9,7 @@ const cors=require("cors");
 
 
 router.use(cors({
-    origin:["https://localhost:3000/*"],
+    origin:["https://localhost:3000/alumni_portal/*"],
     methods:["GET","POST"],
     credentials: true,
 }))
