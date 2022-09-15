@@ -42,9 +42,13 @@ const UserSchema= mongoose.Schema({
     password:{
         type: String,
         required:true
+    },
+    date: {
+        type: String,
+        required : true
     }
     
 },{timestamps:true})
 
-const UserModel = mongoose.model("User",UserSchema);
+const UserModel = mongoose.model("iUser",UserSchema);
 module.exports = UserModel;

@@ -1,4 +1,4 @@
-const User = require("../models/alumniUser.js");
+const User=require("../models/intladm/intladmUser.js");
 const router=require("express").Router();
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
@@ -7,12 +7,11 @@ const mongoose = require('mongoose');
 const cookieParser=require("cookie-parser");
 const session=require("express-session");
 const cors=require("cors");
-// const { default: mongoose } = require("mongoose");
 
-mongoose.connection.useDb("alumni");
+mongoose.connection.useDb("intl_adm");
 
 router.use(cors({
-    origin:["https://localhost:3000/alumni_portal/*"],
+    origin:["https://localhost:3000/international_admissions/*"],
     methods:["GET","POST"],
     credentials: true,
 }))
@@ -34,7 +33,7 @@ router.get("/",(req,res)=>{
         const response={loggedIn: true,user: req.session.user}
       //  const myResponse=JSON.stringify(response)
       ///console logs
-        console.log("Calling from alumniLogin GET API")
+        console.log("Calling from internationalLogin GET API")
         for(let x in response){if(x=="loggedIn")console.log(true);console.log(response[x]);}
       //  console.log("GET"+myResponse.user);
         /////
@@ -76,23 +75,3 @@ router.post("/",async (req,res)=>{
 });
 
 module.exports=router
-
-
-
-/* const curData=await User.find({email: email});
-    if(curData.length > 0){
-        bcrypt.compare(password,curData[0].password,(err,response)=>{
-            if(response){
-                req.session.user= result;
-                console.log(req.session.user);
-                res.send("Correct combination");
-            }
-            else{
-                res.send("Please check your Username/Password");
-            }
-        })
-
-
-    }
-    else res.send("Please check your Username/Password");*/
-   // res.send(curData);

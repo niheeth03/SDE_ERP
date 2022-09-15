@@ -6,20 +6,31 @@ import './style.css'
 
 
 const Application = () => {
-  const [FirstName,setFirstName] = useState('') ;
-  const [MiddleName,setMiddleName] = useState('') ;
-  const [LastName,setLastName] = useState('') ;
-  const [MobileNumber,setMobileNumber] = useState('') ;
-  const [email,setEmail] = useState('');
-  const [password,setPassword] =useState('');
+  const [firstName,setFirstName] = useState("") ;
+  const [middleName,setMiddleName] = useState("") ;
+  const [lastName,setLastName] = useState("") ;
+  const [mobileNumber,setMobileNumber] = useState("") ;
+  const [email,setEmail] = useState("");
+  const [password,setPassword] =useState("");
   const [degree,setDegree]=useState("");
   const [branch,setBranch]=useState("");
-    
+  const [country,setCountry]=useState("");
+  const [date,setDate] = useState("");
   const [Error,setError]=useState(false);
+  const [gender,setGender]=useState("");
+
 
   const handleSubmit = () => {
     const newStudent = {
-      
+       firstName: firstName,
+       middleName:middleName,
+       lastName: lastName,
+       mobileNumber:mobileNumber,
+       email: email,
+       degree:degree,
+       branch: branch,
+       country: country,
+       date: date
     };
     console.log("Were");
     axios.post("/register", newStudent);
@@ -29,7 +40,7 @@ const Application = () => {
 
 
     <div class="applica">
-      <form action="" className="farm" onSubmit={handleSubmit}>
+      <div className="farm">
           <h2><b>Application</b></h2>
           <div class="row mb-3">
             <label for="inputEmail3" class="col-sm-2 col-form-label">FirstName </label>
@@ -55,39 +66,24 @@ const Application = () => {
               <input type="email" class="form-control" id="inputEmail3" required onChange={(e)=>{setEmail(e.target.value);}}/>
             </div>
           </div>
-          <div class="row mb-3">
-            <label for="inputEmail3" class="col-sm-2 col-form-label">MobileNumber</label>
+            <div class="row mb-3">
+          <label for="gender" class="form-label">Gender</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputEmail3" required onChange={(e)=>{setMobileNumber(e.target.value);}}/>
-            </div>
-          </div>
-          <div class="row mb-3">
-            <label for="inputPassword3" class="col-sm-2 col-form-label">Gender</label>
-            <div class="col-sm-10">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" />
-                <label class="form-check-label" for="exampleRadios1">
-                  Male
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2"/>
-                <label class="form-check-label" for="exampleRadios2">
-                  Female
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" />
-                <label class="form-check-label" for="exampleRadios3">
-                  Other
-                </label>
-              </div>
+            <select name="gender" id="gender" onChange={(e) => {
+              setGender(e.target.value);
+            }}>
+                        <option value=" ">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
             </div>
           </div>
           <div class="row mb-3">
             <label for="inputEmail3" class="col-sm-2 col-form-label">Country</label>
             <div class="col-sm-10">
-            <select id="country" name="country">
+            <select id="country" name="country" onChange={(e) => {
+              setCountry(e.target.value);
+            }}>
                   <option>Select country</option>
                   <option value="AF">Afghanistan</option>
                   <option value="AX">Aland Islands</option>
@@ -351,7 +347,7 @@ const Application = () => {
             </div>
           </div>
           <div class="row mb-3">
-          <label for="formFile" class="form-label">Date Of Birth</label>
+          <label for="formFile" class="form-label" onChange={(e)=>setDate(e.target.value)}>Date Of Birth</label>
             <div class="col-sm-10">
               <div class="input-append date" id="dp3" data-date-format="dd-mm-yyyy">
                   <input type="date"></input>
@@ -454,7 +450,7 @@ const Application = () => {
           </tr>
           <br/>
           
-      </form>
+      
       <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
         <label class="form-check-label" for="flexCheckDefault">
@@ -463,12 +459,12 @@ const Application = () => {
       </div>
 
       <br/>
-      <button type="submit" class="btn btn-success">Submit</button><br/><br/>
+      <button type="submit" class="btn btn-success" onClick={handleSubmit}>Submit</button><br/><br/>
       <button type="submit" class="btn btn-danger">Cancel</button>
-          
+      </div> 
       
 
-      {Error && <span style={{color:"red" ,marginTop:"10px"}}>Something went wrong!</span>}
+      
 
 
     </div>

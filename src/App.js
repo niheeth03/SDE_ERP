@@ -17,6 +17,8 @@ import Email from "./online_alerts/pages/groupEmail/groupEmail"
 import Sms  from "./online_alerts/pages/sms/sms"
 
 
+import Certificates from "./cce/pages/Certificates"
+
 
 function App() {
   return (
@@ -42,6 +44,8 @@ function App() {
             <Route path='international_admissions/offers' element={<Offers/>}/>
             <Route path='online_alerts/email' element={<Email/>}/>
             <Route path='online_alerts/sms' element={<Sms/>}/>
+
+            <Route path="cce/cerificates" element={<Certificates/>}/>
         </Routes>
 
 

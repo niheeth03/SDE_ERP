@@ -1,10 +1,10 @@
 const router=require("express").Router();
-const User = require("../models/alumniUser.js");
+const User = require("../models/intladm/intladmUser.js");
 const bcrypt = require('bcrypt');
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 
-mongoose.connection.useDb("alumni");
+mongoose.connection.useDb("intl_adm");
 
 router.get("/", (req, res)=>{
     console.log("open");   

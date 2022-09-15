@@ -94,12 +94,12 @@ function Register() {
             </div>
           </div>
           <div class="row mb-3">
-          <label for="qualification" class="form-label">Gender</label>
+          <label for="gender" class="form-label">Gender</label>
             <div class="col-sm-10">
-            <select name="qualification" id="qualification" onChange={(e) => {
+            <select name="gender" id="gender" onChange={(e) => {
               setGender(e.target.value);
             }}>
-                        <option value=" ">Select Degree</option>
+                        <option value=" ">Select Gender</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
