@@ -9,8 +9,7 @@ const cors=require("cors");
 const registerRoute =require("./routes/alumniRegister.js");
 const loginRoute=require("./routes/alumniLogin.js")
 const emailRoute=require("./routes/groupEmail.js");
-const smsRoute=require("./routes/sms.js")
-const User = require("./models/alumniUser"); 
+const smsRoute=require("./routes/sms.js");
 
 
 mongoose

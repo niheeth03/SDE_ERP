@@ -2,7 +2,7 @@ import './style.css'
 import React, { Component } from "react";
 import { exportComponentAsPNG } from "react-component-export-image";
 
-class App extends Component {
+class Apple extends Component {
   certificateWrapper = React.createRef();
   state = {
     StudentName: "",
@@ -11,7 +11,7 @@ class App extends Component {
   };
   render() {
     return (
-      <div className="App">
+      <div className="Apple">
         <div className="Meta">
           <h1>Generate Certificate</h1>
           <p>Name of Student</p>
@@ -65,6 +65,6 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Apple;
 
   

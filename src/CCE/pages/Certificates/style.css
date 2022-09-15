@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
 }
-.App {
+.Apple {
   font-family: "Calligraffitti", cursive;
   display: flex;
   padding: 15px;
@@ -30,7 +30,7 @@
     overflow-x: hidden;
 } */
 
-.App .Meta input {
+.Apple .Meta input {
   font-family: 'Calligraffitti', cursive;
   padding: 5px;
   width: 100%;
@@ -47,16 +47,16 @@
   border-radius: 10px;
   cursor: pointer;
 } */
-.App #downloadWrapper {
+.Apple #downloadWrapper {
     padding: 20px;
 }
-.App #certificateWrapper {
+.Apple #certificateWrapper {
     box-shadow: 0 0 5px #000;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
 }
-.App #certificateWrapper img {
+.Apple #certificateWrapper img {
     display: block;
 }
 .students {

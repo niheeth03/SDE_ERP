@@ -3,25 +3,34 @@ import axios from "axios";
 import { useRef, useState, useEffect } from "react";
 import{Link,useNavigate} from 'react-router-dom'
 import './style.css'
+import { ModelBuildList } from "twilio/lib/rest/autopilot/v1/assistant/modelBuild";
 
 
 const Application = () => {
-  const [FirstName,setFirstName] = useState('') ;
-  const [MiddleName,setMiddleName] = useState('') ;
+  const [firstName,setFirstName] = useState('') ;
+  const [middleName,setMiddleName] = useState('') ;
   const [LastName,setLastName] = useState('') ;
   const [MobileNumber,setMobileNumber] = useState('') ;
   const [email,setEmail] = useState('');
   const [password,setPassword] =useState('');
   const [degree,setDegree]=useState("");
-  const [branch,setBranch]=useState("");  
+  const [branch,setBranch]=useState("");
+  const [gender,setGender]=useState("");  
   const [Error,setError]=useState(false);
 
   const handleSubmit = () => {
-    const newStudent = {
-      
-    };
+    // const newStudent = {
+    //   firstname: firstName,
+    //   middleName: middleName,
+    //   lastName:  LastName,
+    //   mobileNumber: MobileNumber,
+    //   email: email,
+    //   password: password,
+    //   degree: degree,
+
+    // };
     console.log("Were");
-    axios.post("/register", newStudent);
+    //axios.post("/register", newStudent);
   };
 
   return (
@@ -61,28 +70,18 @@ const Application = () => {
             </div>
           </div>
           <div class="row mb-3">
-            <label for="inputPassword3" class="col-sm-2 col-form-label">Gender</label>
+          <label for="qualification" class="form-label">Gender</label>
             <div class="col-sm-10">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" />
-                <label class="form-check-label" for="exampleRadios1">
-                  Male
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2"/>
-                <label class="form-check-label" for="exampleRadios2">
-                  Female
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" />
-                <label class="form-check-label" for="exampleRadios3">
-                  Other
-                </label>
-              </div>
+            <select name="qualification" id="qualification" onChange={(e) => {
+              setGender(e.target.value);
+            }}>
+                        <option value=" ">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
             </div>
           </div>
+
           <div class="row mb-3">
             <label for="inputEmail3" class="col-sm-2 col-form-label">Country</label>
             <div class="col-sm-10">

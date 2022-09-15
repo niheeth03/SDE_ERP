@@ -90,7 +90,7 @@ function Register() {
           </div>
         </div>
         <div class="row mb-3">
-          <label for="inputEmail3" class="col-sm-2 col-form-label">Mobile Number</label>
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Mobile Number </label>
           <div class="col-sm-10">
             <input type="text" class="form-control" id="inputEmail3" required onChange={(e)=>{setMobile(e.target.value);}}/>
           </div>
@@ -378,7 +378,7 @@ function Register() {
         </form>
         <button type="submit" class="btn btn-primary">Register</button><br/>
         <label for="inputEmail3" class="col-sm-2 col-form-label">Already_a_user?</label>
-              <button type="button" class="btn btn-link"><Link to="/login" className="link">Login</Link></button>
+              <button type="button" class="btn btn-link"><Link to="../login" className="link">Login</Link></button>
             
       </div>
     // <div className="register">
