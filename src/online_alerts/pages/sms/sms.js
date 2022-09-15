@@ -21,10 +21,10 @@ const Sms = () => {
     
   };
   return (
-    <div className="container">
-      <div class="row">  
+    <div className="container bg-light">
+      <div class="row ">  
       
-       <div className="col-sm-4 mx-auto shadow p-5">
+       <div className="mx-auto shadow p-5 ">
         <h4 className="text-center mb-2">Send Message </h4>
            <p class="mb-3 mt-2" style={{color:"green",marginLeft:"57px"}}><b>{msg}</b></p>
           <div className="form-group mb-3">
@@ -37,7 +37,7 @@ const Sms = () => {
             />
           </div>
           <div className="form-group  mb-4 ">
-            <input
+            <textarea rows="10" cols="100"
               type="text"
               className="form-control form-control-lg"
               placeholder="Subject"
@@ -47,9 +47,9 @@ const Sms = () => {
             />
           </div>
           
-          
+          <div className="d-flex align-items-center form-group  mb-5 ">
           <button onClick={onSubmit} className="btn btn-primary btn-block " style={{marginLeft:"100px"}}>Send Message</button>
-       
+          </div>
       </div>
     </div>
   </div>  

@@ -13,7 +13,11 @@ const Status=()=>{
 
 const Element=(props)=>{
     return (
-        <div> 
+        <>
+        <div className="row bg-transparent">
+            <span>Application</span>
+        </div>
+        <div className="row bg-light"> 
         <span className="text">Application submitted</span>  
         <span className="courseName"> {props.coursename} </span>
         <span className="courseId">Course Id: {props.courseid}</span> 
@@ -21,6 +25,8 @@ const Element=(props)=>{
         <button>Withdraw</button> 
         <span className="status">{props.status} </span>
         </div>
+        
+        </>
     )
 }
 

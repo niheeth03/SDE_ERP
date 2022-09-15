@@ -4,18 +4,13 @@ import { BrowserRouter as Router, Routes, Route, Link ,Outlet} from "react-route
 const International_admissions = () => {
   return (
     <div>
-      <nav class="navbar navbar-expand-lg bg-dark">
+      <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-          <Link to="" class="navbar-brand">International Admissions</Link>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <Link to="./login" class="nav-link active" aria-current="page">Login</Link>
-              <Link to="./register" class="nav-link active">Register</Link>
-            </div>
-          </div>
+          <Link to="" class="nav-link">Home</Link>
+          <Link to="register" class="nav-link active">Register</Link>
+          <Link to="login" class="nav-link active">Login</Link>
+          <Link to="application" class="nav-link active">Application</Link>
+          <Link to="application_status">Application Status</Link>
         </div>
       </nav>
       {/* Routes must be changes */}
