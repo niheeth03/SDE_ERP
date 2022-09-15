@@ -15,9 +15,20 @@ import Application_Status from "./international_admissions/pages/Status/index";
 import Offers from "./international_admissions/pages/Offers/index"
 import Online_alerts from "./online_alerts/index"
 import Email from "./online_alerts/pages/groupEmail/groupEmail"
+<<<<<<< HEAD
 import Sms from "./online_alerts/pages/sms/sms"
 import Certificates from "./cce/pages/Certificates/index"
 
+=======
+import Sms  from "./online_alerts/pages/sms/sms"
+import CCE from "./cce/index"
+import Certificates from "./cce/pages/certificates/index"
+// import Application from "./cce/pages/application/index"
+// import Payments from "./cce/pages/payments/index"
+// import Shortlist from "./cce/pages/shortlist/index"
+// import Statistics from "./cce/pages/statistics/index"
+// import Registration from "./cce/pages/registration/index"
+>>>>>>> 6cea26e5d4f967c98d0294e3a16a2bee00580c33
 
 function App() {
   return (
@@ -47,6 +58,11 @@ function App() {
              <Route path='sms' element={<Sms />} />
           </Route>
           <Route path='cce/certificates' element={<Certificates/>}/>
+<<<<<<< HEAD
+=======
+          
+      
+>>>>>>> 6cea26e5d4f967c98d0294e3a16a2bee00580c33
         </Routes>
 
 
