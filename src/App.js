@@ -14,7 +14,7 @@ import International_Register from "./international_admissions/pages/Register/in
 import Application_Status from "./international_admissions/pages/Status/index";
 import Offers from "./international_admissions/pages/Offers/index"
 import Email from "./online_alerts/pages/groupEmail/groupEmail"
-import Sms  from "./online_alerts/pages/sms/sms"
+import Sms from "./online_alerts/pages/sms/sms"
 
 
 
@@ -24,24 +24,25 @@ function App() {
       <Router>
         <Routes>
 
-            <Route path='alumni_portal' element={<Alumni_portal/>} >
-                <Route path='login' element={<Alum_login/>}/>
-                <Route path='register' element={<Alum_register/>}/>
-                <Route path='email' element={<Alum_email/>}/>
-            </Route>
-            <Route path='alumni_portal' element={<Alumni_portal/>}>
-                <Route path='payments' element={<Alumni_payments/>}/>
-             </Route>
+          <Route path='alumni_portal' element={<Alumni_portal />} >
+            <Route path='login' element={<Alum_login />} />
+            <Route path='register' element={<Alum_register />} />
+            <Route path='email' element={<Alum_email />} />
+          </Route>
+          <Route path='alumni_portal' element={<Alumni_portal />}>
+            <Route path='payments' element={<Alumni_payments />} />
+          </Route>
 
 
-            <Route path='international_admissions' element={<International_admissions/>}/>
-            <Route path='international_admissions/application' element={<International_Application/>}/>
-            <Route path='international_admissions/login' element={<International_Login/>}/>
-            <Route path='international_admissions/register' element={<International_Register/>}/>
-            <Route path='international_admissions/application_status'  element={<Application_Status/>}/>
-            <Route path='international_admissions/offers' element={<Offers/>}/>
-            <Route path='online_alerts/email' element={<Email/>}/>
-            <Route path='online_alerts/sms' element={<Sms/>}/>
+          <Route path='international_admissions' element={<International_admissions />}>
+            <Route path='application' element={<International_Application />} />
+            <Route path='login' element={<International_Login />} />
+            <Route path='register' element={<International_Register />} />
+            <Route path='application_status' element={<Application_Status />} />
+            <Route path='offers' element={<Offers />} />
+          </Route>
+          <Route path='online_alerts/email' element={<Email />} />
+          <Route path='online_alerts/sms' element={<Sms />} />
         </Routes>
 
 
