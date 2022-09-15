@@ -2,13 +2,13 @@ const router=require("express").Router();
 const User = require("../models/alumniUser.js");
 const bcrypt = require('bcrypt');
 const bodyParser = require("body-parser");
-const mongoose = require('mongoose');
 
-mongoose.connection.useDb("alumni");
+
+
 
 router.get("/", (req, res)=>{
     console.log("open");   
-    res.send("helo"); 
+    res.send("hello"); 
 })
 
 router.post("/",async(req,res)=>{
@@ -17,12 +17,8 @@ router.post("/",async(req,res)=>{
         console.log("hello");
         const hashedPass=await bcrypt.hash(req.body.password,salt);
         req.body.password = hashedPass;
-       // console.log("hello");
         const newUser=new User(req.body);
-       // console.log(req.body);
-       // console.log(newUser);
         const user=await newUser.save();
-       // console.log("hello");
         res.status(200);
         console.log(user);
         res.send(user);

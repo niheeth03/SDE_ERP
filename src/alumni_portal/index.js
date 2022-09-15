@@ -12,17 +12,23 @@ const Alumni_portal = () => {
 
       <nav class="navbar navbar-expand-lg bg-white">
         <div class="container-fluid">
-          <a class="navbar-brand" href="/alumni_portal">IITT_Alumni</a>
+          {/* <a class="navbar-brand" href="/alumni_portal">IITT_Alumni</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="./login">Login</a>
-              <a class="nav-link active" aria-current="page" href="./register">Register</a>
-              <a class="nav-link" href="./payments">Payments</a>
-            </div>
-          </div>
+              <a class="nav-link active" aria-current="page" href="/alumni_portal/login">Login</a>
+              <a class="nav-link active" aria-current="page" href="/alumni_portal/register">Register</a>
+              <a class="nav-link" href="/alumni_portal/payments">Payments</a> */}
+
+            {/* </div>
+          </div> */}
+          <Link to="" class="nav-link">Home</Link>
+          <Link to="payments" class="nav-link">Payments</Link>
+          <Link to="register" class="nav-link active">Register</Link>
+          <Link to="login" class="nav-link active">Login</Link>
+
         </div>
       </nav>
       {/* <nav>

@@ -1,15 +1,17 @@
-const mongoose= require('mongoose');
+const mongoose = require("mongoose")
+
+
 
 const UserSchema= mongoose.Schema({
-    firstname:{
+    firstName:{
         type: String,
         required:true
     },
-    middlename:{
+    middleName:{
         type: String,
-        required:false
+        required:true
     },
-    lastname:{
+    lastName:{
         type: String,
         required:true
     },
@@ -18,7 +20,7 @@ const UserSchema= mongoose.Schema({
         required:true,
         unique:true
     },
-    mobilenumber:{
+    mobileNumber:{
         type: String,
         required:true,
         unique:true
@@ -26,7 +28,7 @@ const UserSchema= mongoose.Schema({
     gender:{
         type: String,
         required:true
-    },
+    },  
     degree:{
         type: String,
         required:true
@@ -35,20 +37,17 @@ const UserSchema= mongoose.Schema({
         type: String,
         required:true
     },
-    occupation:{
-        type: String,
-        required:true
-    },
     password:{
         type: String,
         required:true
     },
-    date: {
-        type: String,
-        required : true
+    country:{
+        type:String,
+        required: true
     }
+   
     
 },{timestamps:true})
 
-const UserModel = mongoose.model("iUser",UserSchema);
+const UserModel = mongoose.model("intl_admusers",UserSchema);
 module.exports = UserModel;

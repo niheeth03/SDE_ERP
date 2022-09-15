@@ -1,9 +1,4 @@
-const mongoose = require("mongoose")
-mongoose
-    .connect("mongodb+srv://niheeth23:laxminilayam@mastercluster.9eqlou1.mongodb.net/intl_adm?retryWrites=true&w=majority")
-    .then(console.log("connected to mongoDB"))
-    .catch((err)=>console.log(err))
-mongoose.connection.useDb("intl_adm");
+const mongoose= require('mongoose');
 
 const UserSchema= mongoose.Schema({
     firstname:{
@@ -32,11 +27,6 @@ const UserSchema= mongoose.Schema({
         type: String,
         required:true
     },
-    rollnumber:{
-        type: String,
-        required:true,
-        unique:true
-    },   
     degree:{
         type: String,
         required:true
@@ -60,6 +50,5 @@ const UserSchema= mongoose.Schema({
     
 },{timestamps:true})
 
-
-const UserModel = mongoose.model("User",UserSchema);
+const UserModel = mongoose.model("intlApplicationUser",UserSchema);
 module.exports = UserModel;

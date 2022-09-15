@@ -1,14 +1,14 @@
-const User=require("../models/intladm/intladmUser.js");
+const User=require("../models/intladm/intl_admUser.js");
 const router=require("express").Router();
 const bcrypt = require('bcrypt');
-const mongoose = require('mongoose');
+
 
 
 const cookieParser=require("cookie-parser");
 const session=require("express-session");
 const cors=require("cors");
 
-mongoose.connection.useDb("intl_adm");
+
 
 router.use(cors({
     origin:["https://localhost:3000/international_admissions/*"],

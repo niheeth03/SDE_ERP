@@ -32,12 +32,13 @@ function Register() {
        firstName: firstName,
        middleName:middleName,
        lastName: lastName,
+       password: password,
        mobileNumber:mobileNumber,
+       gender: gender,
        email: email,
        degree:degree,
        branch: branch,
        country: country,
-       date: date
     };
     console.log("Were");
     axios.post("/international_admissions/register",newStudent);
@@ -393,10 +394,10 @@ function Register() {
             </div>
           </div>
           <div class="row mb-3">
-          <label for="formFile" class="form-label" onChange={(e)=>setDate(e.target.value)}>Date Of Birth</label>
+          <label for="formFile" class="form-label" >Date Of Birth</label>
             <div class="col-sm-10">
               <div class="input-append date" id="dp3" data-date-format="dd-mm-yyyy">
-                  <input type="date"></input>
+                  <input type="date" onChange={(e)=>{console.log(e.target.value);setDate(e.target.value);} }></input>
               </div>
             </div>
           </div>
@@ -406,6 +407,12 @@ function Register() {
               <input class="form-control" type="file" id="formFile"/>
             </div>
           </div>
+          <div class="row mb-3">
+//           <label for="gender" class="form-label">Mobile Number</label>
+//             <div class="col-sm-10">
+//               <input type="text" class="form-control" id="inputEmail3" required onChange={(e)=>{setMobileNumber(e.target.value);}}/>
+//             </div>
+//           </div>
           <div class="row mb-3">
           <label for="qualification" class="form-label">Degree</label>
             <div class="col-sm-10">

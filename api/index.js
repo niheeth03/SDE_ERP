@@ -17,7 +17,7 @@ const intladmRegister=require("./routes/intladmRegister.js");
 
 
 mongoose
-    .connect("mongodb+srv://niheeth23:laxminilayam@mastercluster.9eqlou1.mongodb.net?retryWrites=true&w=majority")
+    .connect("mongodb+srv://niheeth23:laxminilayam@mastercluster.9eqlou1.mongodb.net/SDE_ERP?retryWrites=true&w=majority")
     .then(console.log("connected to mongoDB"))
     .catch((err)=>console.log(err))
 

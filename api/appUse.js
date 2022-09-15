@@ -11,7 +11,7 @@ var router = express.Router();
 var PORT = 3001;
 
 // This method will call the next() middleware
-app.use('/api', function (req, res, next) {
+app.use('/api', function (req, res, nex) {
    console.log('Time for main function: %d', Date.now())
    next();
 })
