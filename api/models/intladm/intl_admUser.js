@@ -40,6 +40,10 @@ const UserSchema= mongoose.Schema({
     country:{
         type:String,
         required: true
+    },
+    mobileNumber:{
+        type:String,
+        required: true
     }
    
     

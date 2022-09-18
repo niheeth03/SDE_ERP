@@ -17,7 +17,7 @@ const Login=()=>{
       password: password,
     }
     e.preventDefault();
-     await axios.post("/login",intl_login_Data).then((res)=>{
+     await axios.post("./login",intl_login_Data).then((res)=>{
       if(res.data.message){setError(true);console.log(loginStatus);console.log("You are not logged in");}
       else {setLoginStatus(res.data[0].email);console.log("Calling from alum_login POST Aprroved");console.log("Correct combination2");console.log(loginStatus);navigate("../payments")}
      });

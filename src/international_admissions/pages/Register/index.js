@@ -36,6 +36,7 @@ function Register() {
       degree: degree,
       branch: branch,
       country: country,
+      mobileNumber: mobileNumber,
     };
     console.log("Were");
     axios.post("/international_admissions/register", newStudent);

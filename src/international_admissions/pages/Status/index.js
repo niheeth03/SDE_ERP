@@ -3,6 +3,7 @@ import{Link,useNavigate} from 'react-router-dom';
 
 
 const Status=()=>{
+    
     return (
     <>
     <Element coursename="Computer Science"  courseid="1235" date="23-8-2022" status="pending"/>
