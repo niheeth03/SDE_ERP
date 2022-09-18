@@ -66,5 +66,3 @@ class Apple extends Component {
 }
 
 export default Apple;
-
-  

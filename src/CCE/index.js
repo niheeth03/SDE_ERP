@@ -9,9 +9,10 @@ const cce = () => {
         <div class="container-fluid">
           
           <Link to="" class="nav-link">Home</Link>
-          <Link to="Registration" class="nav-link active">Register</Link>
-          <Link to="Payments" class="nav-link">Payments</Link>
+          <Link to="register" class="nav-link active">Register</Link>
+          <Link to="payments" class="nav-link">Payments</Link>
           <Link to="certificates" class="nav-link active">Certificate</Link>
+          <Link to="application" class="nav-link active">Application</Link>
         </div>
       </nav>
       

@@ -25,7 +25,7 @@ const Login=()=>{
   }
   return (
     
-    <div className="total">
+    <div className="total" >
     <form action="" className="farm" onSubmit={handleSubmit}>
       <h1>Login</h1>
       <div class="row mb-3">
