@@ -8,6 +8,7 @@ import './style.css'
 
 const Payments=()=>{
     return(
+    
     <div class="container py-5"> 
         <div class="row mb-4">
         <div class="col-lg-8 mx-auto text-center">
