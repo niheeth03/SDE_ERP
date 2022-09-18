@@ -43,8 +43,8 @@ function App() {
             <Route path='offers' element={<Offers />} />
           </Route>
           <Route path='online_alerts' element={<Online_alerts/>}>
-             <Route path='email' element={<Email/>} />
-             <Route path='sms' element={<Sms />} />
+            <Route path='email' element={<Email/>} />
+            <Route path='sms' element={<Sms />} />
           </Route>
         </Routes>
 
