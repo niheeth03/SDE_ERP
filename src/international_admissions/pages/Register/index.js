@@ -65,7 +65,7 @@ function Register() {
   };
 
   return (
-    <div class="applica">
+    <div className="applica bg-light">
       <div className="farm">
         <h2>
           <b>Register</b>
