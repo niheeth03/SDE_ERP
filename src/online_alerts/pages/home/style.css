@@ -1,0 +1,10 @@
+.home1{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(213, 214, 199);
+    border-radius: 10px;
+    padding: 20px;
+}

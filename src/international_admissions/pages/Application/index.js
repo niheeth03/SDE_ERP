@@ -17,6 +17,9 @@
 //   const [branch,setBranch]=useState("");  
 //   const [Error,setError]=useState(false);
 //   const [gender,setGender]=useState("");
+//   const [courseName,SetCourseName]=useState("");
+//   const [courseId,SetCourseID]=useState("");
+//   const [courseName,SetCourseName]=useState("");
 
 
 //   const handleSubmit = () => {

@@ -13,14 +13,13 @@ const Alumni_portal = () => {
       <nav class="navbar navbar-expand-lg bg-white">
         <div class="container-fluid">
           
-          <Link to="" class="nav-link">Home</Link>
+          <Link to="home" class="nav-link active">Home</Link>
           <Link to="register" class="nav-link active">Register</Link>
           <Link to="login" class="nav-link active">Login</Link>
           <Link to="payments" class="nav-link">Payments</Link>
         </div>
       </nav>
       <Outlet/>
-      <h2>Welcome to all the alumni who are still persistent about the college on goings</h2>
 </div>
   );
 };
