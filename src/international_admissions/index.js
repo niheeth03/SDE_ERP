@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link ,Outlet} from "react-route
 const International_admissions = () => {
   return (
     <div>
-      <nav class="navbar navbar-expand-lg bg-light">
+      <nav class="navbar navbar-expand-lg bg-white">
         <div class="container-fluid">
           <Link to="" class="nav-link">Home</Link>
           <Link to="register" class="nav-link active">Register</Link>
