@@ -736,7 +736,7 @@ function Register() {
 
           <br />
           <button type="submit" class="btn btn-success" onClick={handleSubmit}>
-            Submit
+            Register
           </button>
           <br />
           <br />

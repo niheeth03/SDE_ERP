@@ -6,7 +6,7 @@ const International_admissions = () => {
     <div>
       <nav class="navbar navbar-expand-lg bg-white">
         <div class="container-fluid">
-          <Link to="" class="nav-link">Home</Link>
+          <Link to="home" class="nav-link active">Home</Link>
           <Link to="register" class="nav-link active">Register</Link>
           <Link to="login" class="nav-link active">Login</Link>
           <Link to="application" class="nav-link active">Application</Link>
