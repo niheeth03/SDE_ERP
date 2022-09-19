@@ -20,7 +20,7 @@ const Alumni_portal = () => {
         </div>
       </nav>
       <Outlet/>
-      <h2>Welcome to all the alumni who are still persistent about the college on goings</h2>
+      
 </div>
   );
 };

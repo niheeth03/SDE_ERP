@@ -12,7 +12,7 @@ import International_Application from "./international_admissions/pages/Applicat
 import International_Login from "./international_admissions/pages/Login/index";
 import International_Register from "./international_admissions/pages/Register/index";
 import Application_Status from "./international_admissions/pages/Status/index";
-import Offers from "./international_admissions/pages/Offers/index"
+import International_Offers from "./international_admissions/pages/Offers/index"
 import Online_alerts from "./online_alerts/index"
 import Email from "./online_alerts/pages/groupEmail/groupEmail"
 
@@ -43,7 +43,7 @@ function App() {
             <Route path='login' element={<International_Login />} />
             <Route path='register' element={<International_Register />} />
             <Route path='application_status' element={<Application_Status />} />
-            <Route path='offers' element={<Offers />} />
+            <Route path='offers' element={<International_Offers />} />
           </Route>
           
           <Route path='online_alerts' element={<Online_alerts/>}>
