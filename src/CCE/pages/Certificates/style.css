@@ -7,10 +7,10 @@
   padding: 15px;
 }
 .Meta{
-    width : 30%;
+    width : 25%;
     position: absolute;
     top: 50%;
-    left: 85%;
+    left: 87%;
     transform: translate(-50%, -50%);
     border-radius: 4px;
     background-color: #f2f2f2;
@@ -48,7 +48,7 @@
   cursor: pointer;
 } */
 .Apple #downloadWrapper {
-    padding: 20px;
+    padding: 10px;
 }
 .Apple #certificateWrapper {
     box-shadow: 0 0 5px #000;

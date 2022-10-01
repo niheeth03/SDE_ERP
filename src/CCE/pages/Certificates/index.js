@@ -11,6 +11,7 @@ class Apple extends Component {
   };
   render() {
     return (
+      
       <div className="Apple">
         <div className="Meta">
           <h1>Generate Certificate</h1>
