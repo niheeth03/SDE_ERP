@@ -9,7 +9,7 @@ const Home=()=>{
 
 
     return (
-        <div className="home1">
+        <div className="home1 bg-white">
                 <p><h1 class="mb-3">CCE Portal</h1></p>
                 <p></p><h5 class="mb-4">Here you can apply for Short-term courses, GIAN courses, Workshops and Conferences. Please register in the portal before you apply.</h5><p/>
                 <button type="button" class="btn btn-link btn-block btn-lg"><Link to="/cce/register" className="link">Register for CCE</Link></button>
