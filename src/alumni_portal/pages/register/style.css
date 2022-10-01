@@ -5,7 +5,7 @@ body {
     font-family: montserrat;
     height: 100vh;
     overflow: hidden;
-    background: url("./../../../../images/IITTP.jfif");
+    
     background-size: cover;
     height: 100%;
     overflow:visible;
@@ -13,13 +13,13 @@ body {
 
 .all{
     width : 50%;
-    position: absolute;
-    top: 65%;
+    position: relative;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 4px;
     background-color: #f2f2f2;
-    padding: 20px;
+    padding: 30%;
     overflow-x: hidden;
 }
 

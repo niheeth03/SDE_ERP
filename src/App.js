@@ -44,14 +44,7 @@ function App() {
             <Route path='email' element={<Alum_email />} />
             <Route path='payments' element={<Alumni_payments />} />
             <Route path='email' element={<Email/>} />
-            Submodule 4:
-
-Goal: Shortlisting and confirmation 
-Solution:Similar to application acceptance and rejection in the international admissions sections.
-Progress:To be implemented(can be implemented by making few changes from international_admissions/application back end)
-Pending: Total
-
-
+            
           </Route>
 
           <Route path='international_admissions' element={<International_admissions />}>
