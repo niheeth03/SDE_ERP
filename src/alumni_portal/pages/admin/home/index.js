@@ -12,8 +12,7 @@ const Home=()=>{
         <div className="home1">
                 <p><h1 class="mb-3">IIT Tirupati's Alumni Portal</h1></p>
                 <p></p><h5 class="mb-4">Welcome to all the alumni who are still persistent about the college on goings</h5><p/>
-                <button type="button" class="btn btn-link btn-lg"><Link to="/alumni_portal/register" className="link">Register</Link></button><br/>
-                <p>Already an user?<button type="button" class="btn btn-link btn-lg"><Link to="/alumni_portal/login" className="link">Login</Link></button></p>
+                <p><button type="button" class="btn btn-link btn-lg"><Link to="/alumni_portal/admin/login" className="link">Login</Link></button></p>
         </div>
     )
 }

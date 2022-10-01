@@ -2,21 +2,20 @@ body {
   margin: 0;
   padding: 0;
   font-family: montserrat;
-  opacity: 100%;
-  background-position-x: center;
+  
+  background-size: cover;
   height: 100vh;
+  overflow: hidden;
 }
 
-.total{
-  width : 27%;
+.center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 4px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  overflow: auto;
+  width: 400px;
+  background: white;
+  border-radius: 10px;
 }
 
 /* button{
