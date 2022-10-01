@@ -2,8 +2,6 @@ const alumniusers = require("../models/alumniUser.js");
 const router=require("express").Router();
 const bcrypt = require('bcrypt');
 
-
-
 const cookieParser=require("cookie-parser");
 const session=require("express-session");
 const cors=require("cors");

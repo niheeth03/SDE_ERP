@@ -14,7 +14,7 @@ import International_Application from "./international_admissions/pages/Applicat
 import International_Login from "./international_admissions/pages/Login/index";
 import International_Register from "./international_admissions/pages/Register/index";
 import Application_Status from "./international_admissions/pages/Status/index";
-import Offers from "./international_admissions/pages/Offers/index"
+import International_Offers from "./international_admissions/pages/Offers/index"
 import Online_alerts from "./online_alerts/index"
 import Online_home from "./online_alerts/pages/home/index";
 import Email from "./online_alerts/pages/groupEmail/groupEmail"
@@ -43,6 +43,15 @@ function App() {
             <Route path='register' element={<Alum_register />} />
             <Route path='email' element={<Alum_email />} />
             <Route path='payments' element={<Alumni_payments />} />
+            <Route path='email' element={<Email/>} />
+            Submodule 4:
+
+Goal: Shortlisting and confirmation 
+Solution:Similar to application acceptance and rejection in the international admissions sections.
+Progress:To be implemented(can be implemented by making few changes from international_admissions/application back end)
+Pending: Total
+
+
           </Route>
 
           <Route path='international_admissions' element={<International_admissions />}>
@@ -51,7 +60,7 @@ function App() {
             <Route path='login' element={<International_Login />} />
             <Route path='register' element={<International_Register />} />
             <Route path='application_status' element={<Application_Status />} />
-            <Route path='offers' element={<Offers />} />
+            <Route path='offers' element={<International_Offers />} />
           </Route>
           
           <Route path='online_alerts' element={<Online_alerts/>}>
