@@ -33,8 +33,8 @@ import International_Application from "./international_admissions/pages/Applicat
 import International_Login from "./international_admissions/pages/Login/index";
 import International_Register from "./international_admissions/pages/Register/index";
 import Application_Status from "./international_admissions/pages/Status/index";
-import Offers from "./international_admissions/pages/Offers/index";
-import Online_alerts from "./online_alerts/index";
+import International_Offers from "./international_admissions/pages/Offers/index"
+import Online_alerts from "./online_alerts/index"
 import Online_home from "./online_alerts/pages/home/index";
 import Email from "./online_alerts/pages/groupEmail/groupEmail";
 
@@ -71,23 +71,21 @@ function App() {
               <Route path="email" element={<Alum_Admin_email />} />
             </Route>
             <Route path="commlogin" element={<Alum_Commlogin/>}/>
-            {/* <Route path='home' element={<Alum_home/>}/>
-            <Route path='login' element={<Alum_login />} />
-            <Route path='register' element={<Alum_register />} />
-            <Route path='email' element={<Alum_email />} />
-            <Route path='payments' element={<Alumni_payments />} /> */}
           </Route>
 
-          <Route
-            path="international_admissions"
-            element={<International_admissions />}
-          >
-            <Route path="home" element={<International_home />} />
-            <Route path="application" element={<International_Application />} />
-            <Route path="login" element={<International_Login />} />
-            <Route path="register" element={<International_Register />} />
-            <Route path="application_status" element={<Application_Status />} />
-            <Route path="offers" element={<Offers />} />
+          <Route path='international_admissions' element={<International_admissions />}>
+            <Route path='home' element={<International_home/>}/>
+            <Route path='application' element={<International_Application />} />
+            <Route path='login' element={<International_Login />} />
+            <Route path='register' element={<International_Register />} />
+            <Route path='application_status' element={<Application_Status />} />
+            <Route path='offers' element={<International_Offers />} />
+          </Route>
+          
+          <Route path='online_alerts' element={<Online_alerts/>}>
+             <Route path='home' element={<Online_home/>}/>
+             <Route path='email' element={<Email/>} />
+             <Route path='sms' element={<Sms />} />
           </Route>
 
           <Route path="online_alerts" element={<Online_alerts />}>

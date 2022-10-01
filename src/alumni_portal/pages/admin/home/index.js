@@ -9,7 +9,7 @@ const Home=()=>{
 
 
     return (
-        <div className="home1">
+        <div className="home1 bg-white">
                 <p><h1 class="mb-3">IIT Tirupati's Alumni Portal</h1></p>
                 <p></p><h5 class="mb-4">Welcome to all the alumni who are still persistent about the college on goings</h5><p/>
                 <p><button type="button" class="btn btn-link btn-lg"><Link to="/alumni_portal/admin/login" className="link">Login</Link></button></p>

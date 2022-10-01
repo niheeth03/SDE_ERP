@@ -13,11 +13,20 @@ const smsRoute=require("./routes/sms.js");
 const User = require("./models/alumniUser"); 
 const intladmLogin=require("./routes/intladmLogin.js");
 const intladmRegister=require("./routes/intladmRegister.js");
+const intladmFetchdata=require("./routes/intladmFetchdata.js");
 
 
 
 mongoose
-    .connect("mongodb+srv://niheeth23:laxminilayam@mastercluster.9eqlou1.mongodb.net/SDE_ERP?retryWrites=true&w=majority")
+    .connect("mongodb+srv://niheeth23:laxminilayam@mastercluster.9eqlou1.mongodb.net/SDE_ERP?retryWrites=true&w=majority", (err, db) => {
+        if(err) throw err;
+        var dB = db.useDb("SDE_ERP");
+        dB.collection("alumniusers").findOne({}, function(err, result) {
+            if (err) throw err;
+            console.log(result);
+        });
+        // console.log(dB.intl_admcourses.find());
+    })
     .then(console.log("connected to mongoDB"))
     .catch((err)=>console.log(err))
 
@@ -30,6 +39,7 @@ app.use("/groupEmail", emailRoute);
 app.use("/sms",smsRoute);
 app.use("/international_admissions/register",intladmRegister);
 app.use("/international_admissions/login",intladmLogin);
+app.use("/international_admissions/fetchdata",intladmFetchdata)
 
 
 app.listen(3080,()=>{

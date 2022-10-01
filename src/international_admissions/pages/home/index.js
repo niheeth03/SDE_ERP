@@ -9,7 +9,7 @@ const Home=()=>{
 
 
     return (
-        <div className="home1">
+        <div className="home1 bg-light">
                 <p><h1 class="mb-3">International Admissions Portal</h1></p>
                 <p></p><h5 class="mb-4">Welcome to all the students!!</h5><p/>
                 <button type="button" class="btn btn-link btn-lg"><Link to="/international_admissions/register" className="link">Register</Link></button><br/>
