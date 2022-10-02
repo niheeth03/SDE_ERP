@@ -67,6 +67,17 @@ function Registration() {
   };
 
   return (
+    <>
+        <div>
+            <nav class="navbar navbar-expand-lg bg-white">
+              <div class="container-fluid">
+              <Link to='../../../home' class="nav-link-active">ERP</Link>
+              <Link to='../../home' class="nav-link-active">Home</Link>
+              <Link to='../../user/login' class="nav-link-active">Login</Link>
+              </div>
+            </nav>
+        </div>
+    
     <div className="all">
           <h1>Register</h1>
           <div class="row mb-3">
@@ -413,6 +424,7 @@ function Registration() {
           <label for="inputEmail3" class="col-sm-2 col-form-label">Already_a_user?</label>
           <button type="button" class="btn btn-link"><Link to="/alumni_portal/login" className="link">Login</Link></button>
       </div>
+      </>
     // <div className="register">
 
     //   <h2>Register</h2>
@@ -812,6 +824,7 @@ function Registration() {
     //     </Link>
     //   </button>
     // </div>
+    
   );
 }
 
