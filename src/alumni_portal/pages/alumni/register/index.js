@@ -422,7 +422,7 @@ function Register() {
 
           <button type="submit" class="btn btn-primary" onClick={handleSubmit}>Register</button><br/>
           <label for="inputEmail3" class="col-sm-2 col-form-label">Already_a_user?</label>
-          <button type="button" class="btn btn-link"><Link to="/alumni_portal/login" className="link">Login</Link></button>
+          <button type="button" class="btn btn-link"><Link to="/alumni_portal/alumni/login" className="link">Login</Link></button>
       </div>
     // <div className="register">
 

@@ -11,7 +11,7 @@ const Home=()=>{
     return (
         <div className="home0 bg-light">
                 <p><h1 class="mb-3">IIT Tirupati's ERP Website</h1></p>
-                <button type="button" class="btn btn-link btn-block btn-lg" ><Link to="/alumni_portal/home" className="link">Alumni Portal</Link></button>
+                <button type="button" class="btn btn-link btn-block btn-lg" ><Link to="/alumni_portal" className="link">Alumni Portal</Link></button>
                 <button type="button" class="btn btn-link btn-block btn-lg" ><Link to="/international_admissions/home" className="link">International Admissions</Link></button>
                 <button type="button" class="btn btn-link btn-block btn-lg" ><Link to="/cce/home" className="link">Center for Continuing Education(CCE)</Link></button>
         </div>
