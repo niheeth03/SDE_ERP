@@ -1,12 +1,31 @@
-import { BrowserRouter as Router, Routes, Route,Navigate } from "react-router-dom";
-import './App.css';
-import Home from "./home/index"
-import Alumni_portal from "./alumni_portal/index";
-import Alum_home from "./alumni_portal/pages/home"
-import Alum_login from "./alumni_portal/pages/login"
-import Alum_register from "./alumni_portal/pages/register"
-import Alum_email from "./alumni_portal/pages/groupEmail/groupEmail"
-import Alumni_payments from "./alumni_portal/pages/payments";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import "./App.css";
+import Home from "./home/index";
+import Alum_portal from "./alumni_portal/index";
+import Alum_Stud from "./alumni_portal/pages/alumni/index";
+import Alum_Admin from "./alumni_portal/pages/admin/index";
+import Alum_Commlogin from "./alumni_portal/pages/commlogin/index";
+
+import Alum_Stud_home from "./alumni_portal/pages/alumni/home";
+import Alum_Admin_home from "./alumni_portal/pages/admin/home";
+import Alum_Stud_login from "./alumni_portal/pages/alumni/login";
+import Alum_Admin_login from "./alumni_portal/pages/admin/login";
+import Alum_Stud_payments from "./alumni_portal/pages/alumni/payments";
+import Alum_Admin_payments from "./alumni_portal/pages/admin/payments";
+import Alum_Stud_profile from "./alumni_portal/pages/alumni/profile";
+import Alum_Stud_register from "./alumni_portal/pages/alumni/register";
+import Alum_Admin_email from "./alumni_portal/pages/admin/groupEmail/groupEmail";
+import Alum_Admin_alumni from "./alumni_portal/pages/admin/alumni";
+
+// import Alum_login from "./alumni_portal/pages/login";
+// import Alum_register from "./alumni_portal/pages/register";
+// import Alum_email from "./alumni_portal/pages/groupEmail/groupEmail";
+// import Alumni_payments from "./alumni_portal/pages/payments";
 
 import International_admissions from "./international_admissions/index";
 import International_home from "./international_admissions/pages/home/index";
@@ -17,34 +36,41 @@ import Application_Status from "./international_admissions/pages/Status/index";
 import International_Offers from "./international_admissions/pages/Offers/index"
 import Online_alerts from "./online_alerts/index"
 import Online_home from "./online_alerts/pages/home/index";
-import Email from "./online_alerts/pages/groupEmail/groupEmail"
+import Email from "./online_alerts/pages/groupEmail/groupEmail";
 
-import Sms  from "./online_alerts/pages/sms/sms"
-import CCE from "./cce/index"
-import CCE_Certificates from "./cce/pages/certificates/index"
-import CCE_Application from "./cce/pages/application/index"
-import CCE_Payments from "./cce/pages/payments/index"
-import CCE_home from "./cce/pages/home/index"
+import Sms from "./online_alerts/pages/sms/sms";
+import CCE from "./cce/index";
+import CCE_Certificates from "./cce/pages/certificates/index";
+import CCE_Application from "./cce/pages/application/index";
+import CCE_Payments from "./cce/pages/payments/index";
+import CCE_home from "./cce/pages/home/index";
 // import Shortlist from "./cce/pages/shortlist/index"
 // import Statistics from "./cce/pages/statistics/index"
-import CCE_Registration from "./cce/pages/registration/index"
+import CCE_Registration from "./cce/pages/registration/index";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-
-          <Route path='home' element={<Home/>}/>
-          <Route path='/' element={<Navigate to="home"/>}/>
-          <Route path='alumni_portal' element={<Alumni_portal />} >
-            <Route path='home' element={<Alum_home/>}/>
-            <Route path='login' element={<Alum_login />} />
-            <Route path='register' element={<Alum_register />} />
-            <Route path='email' element={<Alum_email />} />
-            <Route path='payments' element={<Alumni_payments />} />
-            <Route path='email' element={<Email/>} />
-            
+          <Route path="home" element={<Home />} />
+          <Route path="/" element={<Navigate to="home" />} />
+          <Route path="alumni_portal" element={<Alum_portal />}>
+            <Route path="alumni" element={<Alum_Stud />}>
+              <Route path="home" element={<Alum_Stud_home />} />
+              <Route path="login" element={<Alum_Stud_login />} />
+              <Route path="register" element={<Alum_Stud_register />} />
+              <Route path="payments" element={<Alum_Stud_payments />} />
+              <Route path="profile" element={<Alum_Stud_profile />} />
+            </Route>
+            <Route path="admin" element={<Alum_Admin />}>
+              <Route path="home" element={<Alum_Admin_home />} />
+              <Route path="login" element={<Alum_Admin_login />} />
+              <Route path="alumni" element={<Alum_Admin_alumni />} />
+              <Route path="payments" element={<Alum_Admin_payments />} />
+              <Route path="email" element={<Alum_Admin_email />} />
+            </Route>
+            <Route path="commlogin" element={<Alum_Commlogin/>}/>
           </Route>
 
           <Route path='international_admissions' element={<International_admissions />}>
@@ -62,18 +88,20 @@ function App() {
              <Route path='sms' element={<Sms />} />
           </Route>
 
-          <Route path='cce' element={<CCE/>}>
-             <Route path='home' element={<CCE_home/>}/>
-             <Route path='certificates' element={<CCE_Certificates/>} />
-             <Route path='application' element={<CCE_Application/>} />
-             <Route path='payments' element={<CCE_Payments/>} />
-             <Route path='register' element={<CCE_Registration/>} />
+          <Route path="online_alerts" element={<Online_alerts />}>
+            <Route path="home" element={<Online_home />} />
+            <Route path="email" element={<Email />} />
+            <Route path="sms" element={<Sms />} />
           </Route>
-          
 
+          <Route path="cce" element={<CCE />}>
+            <Route path="home" element={<CCE_home />} />
+            <Route path="certificates" element={<CCE_Certificates />} />
+            <Route path="application" element={<CCE_Application />} />
+            <Route path="payments" element={<CCE_Payments />} />
+            <Route path="register" element={<CCE_Registration />} />
+          </Route>
         </Routes>
-
-
       </Router>
     </div>
   );
