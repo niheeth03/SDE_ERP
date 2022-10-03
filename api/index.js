@@ -13,6 +13,9 @@ const smsRoute=require("./routes/sms.js");
 const User = require("./models/alumniUser"); 
 const intladmLogin=require("./routes/intladmLogin.js");
 const intladmRegister=require("./routes/intladmRegister.js");
+const intladmStatus=require("./routes/intladmStatus.js");
+
+
 
 
 
@@ -30,6 +33,7 @@ app.use("/groupEmail", emailRoute);
 app.use("/sms",smsRoute);
 app.use("/international_admissions/register",intladmRegister);
 app.use("/international_admissions/login",intladmLogin);
+app.use("/international_admissions/status",intladmStatus);
 
 
 app.listen(3080,()=>{

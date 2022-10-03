@@ -62,13 +62,13 @@ router.post("/",async (req,res)=>{
                 res.send(result);
             }
             else{
-                console.log("error");
+                console.log("error hello");
                 res.send({msg:"Please check your Username/Password"});
             }
         })
     }
     else{
-        console.log("error");
+        console.log("error hell");
         res.send({msg:"Please check your Username/Password"});
     }
    });
