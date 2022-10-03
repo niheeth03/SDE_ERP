@@ -38,15 +38,17 @@ import Online_alerts from "./online_alerts/index"
 import Online_home from "./online_alerts/pages/home/index";
 import Email from "./online_alerts/pages/groupEmail/groupEmail";
 
-import Sms from "./online_alerts/pages/sms/sms";
-import CCE from "./cce/index";
-import CCE_Certificates from "./cce/pages/certificates/index";
-import CCE_Application from "./cce/pages/application/index";
-import CCE_Payments from "./cce/pages/payments/index";
-import CCE_home from "./cce/pages/home/index";
-// import Shortlist from "./cce/pages/shortlist/index"
-// import Statistics from "./cce/pages/statistics/index"
-import CCE_Registration from "./cce/pages/registration/index";
+import Sms  from "./online_alerts/pages/sms/sms"
+//import CCE from "./cce/index"
+import CCE_Certificates from "./cce/pages/admin/certificates/index"
+import CCE_Application from "./cce/pages/user/application/index"
+import CCE_Payments from "./cce/pages/user/payments/index"
+import CCE_home from "./cce/pages/home/index"
+import CCE_Shortlist from "./cce/pages/admin/shortlist/index"
+import CCE_Statistics from "./cce/pages/admin/statistics/index"
+import CCE_Registration from "./cce/pages/login/registration/index"
+import CCE_Admin_Login from "./cce/pages/login/admin_login/index"
+import CCE_User_Login from "./cce/pages/login/user_login/index"
 
 function App() {
   return (
@@ -70,7 +72,7 @@ function App() {
               <Route path="payments" element={<Alum_Admin_payments />} />
               <Route path="email" element={<Alum_Admin_email />} />
             </Route>
-            <Route path="commlogin" element={<Alum_Commlogin/>}/>
+             <Route path="commlogin" element={<Alum_Commlogin/>}/>
           </Route>
 
           <Route path='international_admissions' element={<International_admissions />}>
@@ -88,21 +90,26 @@ function App() {
              <Route path='sms' element={<Sms />} />
           </Route>
 
-          <Route path="online_alerts" element={<Online_alerts />}>
-            <Route path="home" element={<Online_home />} />
-            <Route path="email" element={<Email />} />
-            <Route path="sms" element={<Sms />} />
+          <Route path='cce' >
+             <Route path='home' element={<CCE_home/>}/>
+             <Route path="user">
+                  <Route path='application' element={<CCE_Application/>} />
+                  <Route path='payments' element={<CCE_Payments/>} />
+                  <Route path='register' element={<CCE_Registration/>} />
+                  <Route path='login' element={<CCE_User_Login/>} />
+              </Route>
+              <Route path="admin">
+                  <Route path='certificates' element={<CCE_Certificates/>} />
+                  <Route path='statistics' element={<CCE_Statistics/>} />
+                  <Route path='shortlist' element={<CCE_Shortlist/>} />
+                  <Route path='login' element={<CCE_Admin_Login/>} />
+              </Route>
+             
           </Route>
 
-          <Route path="cce" element={<CCE />}>
-            <Route path="home" element={<CCE_home />} />
-            <Route path="certificates" element={<CCE_Certificates />} />
-            <Route path="application" element={<CCE_Application />} />
-            <Route path="payments" element={<CCE_Payments />} />
-            <Route path="register" element={<CCE_Registration />} />
-          </Route>
-        </Routes>
+         </Routes>
       </Router>
+      
     </div>
   );
 }
