@@ -8,14 +8,14 @@ import axios from "axios";
 
 function Register() {
 
-  const [name,setName]=useState("");
-  const [rollNumber,setRollNumber]=useState("");
-  const [email,setEmail]=useState("");
-  const [batch,setBatch]=useState("");
-  const [gender,setGender]=useState("");
-  const [degree,setDegree]=useState("");
-  const [branch,setBranch]=useState("");
-  const [occupation,setOccupation]=useState("");
+  const [name, setName] = useState("");
+  const [rollNumber, setRollNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [batch, setBatch] = useState("");
+  const [gender, setGender] = useState("");
+  const [degree, setDegree] = useState("");
+  const [branch, setBranch] = useState("");
+  const [occupation, setOccupation] = useState("");
   const [password, setPassword] = useState("");
   const [cPassword, setCPassword] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
@@ -27,26 +27,26 @@ function Register() {
 
   const Navigate = useNavigate();
 
-  const handleSubmit=()=>{
-    const newStudent={
+  const handleSubmit = () => {
+    const newStudent = {
       name: name,
-      rollnumber:rollNumber,
+      rollnumber: rollNumber,
       email: email,
-      batch:batch,
-      gender:gender,
+      batch: batch,
+      gender: gender,
       degree: degree,
       branch: branch,
       occupation: occupation,
       password: password
     };
     console.log("Were");
-    axios.post("/alumni_portal/register",newStudent);
+    axios.post("/alumni_portal/register", newStudent);
   }
 
   const handleCPassword = (e) => {
     setCPassword(e.target.value);
     setIsCPasswordDirty(true);
-}
+  }
 
   useEffect(() => {
     if (isCPasswordDirty) {
@@ -68,96 +68,96 @@ function Register() {
 
   return (
     <div className="all">
-          <h1>Register</h1>
-          <div class="row mb-3">
-            <label for="inputEmail3" class="col-sm-2 col-form-label">UserName</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputEmail3" required onChange={(e)=>{setName(e.target.value);}}/>
-            </div>
-          </div>
-          <div class="row mb-3">
-            <label for="inputPassword3" class="col-sm-2 col-form-label">Enrollment Number</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputPassword3"required onChange={(e)=>{setRollNumber(e.target.value);}}/>
-            </div>
-          </div>
-          <div class="row mb-3">
-            <label for="inputPassword3" class="col-sm-2 col-form-label">Email</label>
-            <div class="col-sm-10">
-              <input type="email" class="form-control" id="inputPassword3"required onChange={(e)=>{setEmail(e.target.value);}}/>
-            </div>
-          </div>
-          <div class="row mb-3">
-            <label for="inputPassword3" class="col-sm-2 col-form-label">Year of Enrollment</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputPassword3"required onChange={(e)=>{setBatch(e.target.value);}}/>
-            </div>
-          </div>
-          <div class="row mb-3">
-          <label for="gender" class="form-label">Gender</label>
-            <div class="col-sm-10">
-            <select name="gender" id="gender" onChange={(e) => {
-              setGender(e.target.value);
-            }}>
-                        <option value=" ">Select Gender</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                    </select>
-            </div>
-          </div>
-          <div class="row mb-3">
-          <label for="qualification" class="form-label">Degree</label>
-            <div class="col-sm-10">
-            <select name="qualification" id="qualification" onChange={(e) => {
-              setDegree(e.target.value);
-            }}>
-                        <option value=" ">Select Degree</option>
-                        <option value="Bachelors">Bachelors</option>
-                        <option value="Masters">Masters</option>
-                        <option value="Phd">Phd</option>
-                    </select>
-            </div>
-          </div>
-          <div class="row mb-3">
-          <label for="qualification" class="form-label">Department</label>
-            <div class="col-sm-10">
-            <select name="qualification" id="qualification" onChange={(e) => {setBranch(e.target.value);}}>
-                        <option value=" ">Select Department</option>
-                        <option value="CH">Chemical</option>
-                        <option value="CSE">Computer Science</option>
-                        <option value="CE">Civil</option>
-                        <option value="EE">Electrical</option>
-                        <option value="ME">Mechanical</option>
-                        <option value="PH">Physics</option>
-                        <option value="MA">Maths</option>
-                        <option value="HS">Humanities and Social Sciences</option>
-                    </select>
-            </div>
-          </div>
-          <div class="row mb-3">
-            <label for="inputPassword3" class="col-sm-2 col-form-label">Occupation</label>
-            <div class="col-sm-10">
-              <input type="email" class="form-control" id="inputPassword3"required onChange={(e)=>{setOccupation(e.target.value);}}/>
-            </div>
-          </div>
-          <div class="row mb-3">
-            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-            <div class="col-sm-10">
-              <input type="password" class="form-control" id="inputPassword3"value={password} required onChange={(e)=>{setPassword(e.target.value);}}/>
-            </div>
-          </div>
-          <div class="row mb-3">
-            <label for="inputPassword3" class="col-sm-2 col-form-label">Confirm Password</label>
-            <div class="col-sm-10">
-              <input type="password" class="form-control" id="inputPassword3"value={cPassword} required onChange={handleCPassword}/>
-            </div>
-          </div>
-          {showErrorMessage && isCPasswordDirty ? (
-            <div> Passwords did not match </div>
-          ) : (
-            ""
-          )}
-          {/* <div class="row mb-3">
+      <h1>Register</h1>
+      <div class="row mb-3">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">UserName</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputEmail3" required onChange={(e) => { setName(e.target.value); }} />
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Enrollment Number</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputPassword3" required onChange={(e) => { setRollNumber(e.target.value); }} />
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="inputPassword3" required onChange={(e) => { setEmail(e.target.value); }} />
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Year of Enrollment</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputPassword3" required onChange={(e) => { setBatch(e.target.value); }} />
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="gender" class="form-label">Gender</label>
+        <div class="col-sm-10">
+          <select name="gender" id="gender" onChange={(e) => {
+            setGender(e.target.value);
+          }}>
+            <option value=" ">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="qualification" class="form-label">Degree</label>
+        <div class="col-sm-10">
+          <select name="qualification" id="qualification" onChange={(e) => {
+            setDegree(e.target.value);
+          }}>
+            <option value=" ">Select Degree</option>
+            <option value="Bachelors">Bachelors</option>
+            <option value="Masters">Masters</option>
+            <option value="Phd">Phd</option>
+          </select>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="qualification" class="form-label">Department</label>
+        <div class="col-sm-10">
+          <select name="qualification" id="qualification" onChange={(e) => { setBranch(e.target.value); }}>
+            <option value=" ">Select Department</option>
+            <option value="CH">Chemical</option>
+            <option value="CSE">Computer Science</option>
+            <option value="CE">Civil</option>
+            <option value="EE">Electrical</option>
+            <option value="ME">Mechanical</option>
+            <option value="PH">Physics</option>
+            <option value="MA">Maths</option>
+            <option value="HS">Humanities and Social Sciences</option>
+          </select>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Occupation</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="inputPassword3" required onChange={(e) => { setOccupation(e.target.value); }} />
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="inputPassword3" value={password} required onChange={(e) => { setPassword(e.target.value); }} />
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Confirm Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="inputPassword3" value={cPassword} required onChange={handleCPassword} />
+        </div>
+      </div>
+      {showErrorMessage && isCPasswordDirty ? (
+        <div> Passwords did not match </div>
+      ) : (
+        ""
+      )}
+      {/* <div class="row mb-3">
             <label for="inputPassword3" class="col-sm-2 col-form-label">Nationality</label>
             <div class="col-sm-10">
             <select id="country" name="country">
@@ -417,7 +417,6 @@ function Register() {
                   </select>
             </div>
           </div> */}
-          
 
 
           <button type="submit" class="btn btn-primary" onClick={handleSubmit}>Register</button><br/>

@@ -70,7 +70,7 @@ const Application = () => {
       <br/>
       <button type="submit" class="btn btn-success">Submit</button><br/><br/>
       <button type="submit" class="btn btn-danger">Cancel</button>
-          
+      <button type="button" class="btn btn-link btn-block btn-lg"><Link to="/cce/user/payments" className="link">Payments</Link></button>  
       
 
       {Error && <span style={{color:"red" ,marginTop:"10px"}}>Something went wrong!</span>}

@@ -14,23 +14,35 @@ const Login=()=>{
   const [Error,setError]=useState(false);
   axios.defaults.withCredentials=true;
   const handleSubmit=async(e)=>{
-     const Login_Data={
-       email: email,
-       password: password,
-     }
-     e.preventDefault();
-     await axios.post("./login",Login_Data).then((res)=>{
-      if(res.data.message){setError(true);console.log(loginStatus);console.log("You are not logged in");}
-      else {setLoginStatus(res.data[0].email);console.log("Calling from alum_login POST Aprroved");console.log("Correct combination2");console.log(loginStatus);navigate("../home")}
-     });
+    //  const Login_Data={
+    //    email: email,
+    //    password: password,
+    //  }
+    //  e.preventDefault();
+    //  await axios.post("./login",Login_Data).then((res)=>{
+    //   if(res.data.message){setError(true);console.log(loginStatus);console.log("You are not logged in");}
+    //   else {setLoginStatus(res.data[0].email);console.log("Calling from alum_login POST Aprroved");console.log("Correct combination2");console.log(loginStatus);navigate("../payments")}
+    //  });
   }
   return (
+    <>
+    <div>
+
+    <nav class="navbar navbar-expand-lg bg-white">
+    <div class="container-fluid">
+    <Link to='../../../home' class="nav-link-active">ERP</Link>
+    <Link to='../../home' class="nav-link-active">Home</Link>
+    <Link to='../../user/register' class="nav-link-active">Register</Link>
+    </div>
+    
+   </nav>
+</div>
 
 
     
     <div className="total">
       
-        <h1>Login</h1>
+        <h1>User Login</h1>
         <div class="row mb-3">
           <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
           <div class="col-sm-10">
@@ -78,6 +90,7 @@ const Login=()=>{
     <div className="signup_link">Not a member? <Link className="reg" to="../register">Register</Link> </div>
     
   </div>
+  </>
   )
 }
 
