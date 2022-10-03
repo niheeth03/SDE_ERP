@@ -17,14 +17,15 @@ const Login=()=>{
       password: password,
     }
     e.preventDefault();
-     await axios.post("./login",intl_login_Data).then((res)=>{
+    console.log("IN");
+     await axios.post("/international_admissions/login",intl_login_Data).then((res)=>{
       if(res.data.message){setError(true);console.log(loginStatus);console.log("You are not logged in");}
-      else {setLoginStatus(res.data[0].email);console.log("Calling from alum_login POST Aprroved");console.log("Correct combination2");console.log(loginStatus);navigate("../payments")}
+      else {setLoginStatus(res.data[0].email);console.log("Calling from alum_login POST Aprroved");console.log("Correct combination2");console.log(loginStatus);navigate("..")}
      });
   }
   return (
     
-    <div className="total">
+    <div className="total" >
     <form action="" className="farm" onSubmit={handleSubmit}>
       <h1>Login</h1>
       <div class="row mb-3">
