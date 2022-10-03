@@ -5,7 +5,7 @@ import {
     Link,
     Outlet,
   } from "react-router-dom";
-  
+  import "./style.css";
   const Alumni_portal_Commlogin = () => {
     return (
       <div>
@@ -19,9 +19,9 @@ import {
             <Link to="payments" class="nav-link">Payments</Link>
           </div>
         </nav> */}
-        <div>
-            <Link to="../admin/login" class="nav-link active">Admin Login</Link>
-            <Link to="../alumni/login" class="nav-link active">Alumni Login</Link>
+        <div className="contain">
+            <button type="button" class="btn btn-outline-primary"><Link to="../admin/login" class="nav-link active">Admin Login</Link></button><br/>
+            <button type="submit" class="btn btn-outline-primary"><Link to="../alumni/login" class="nav-link active">Alumni Login</Link></button>
         </div>
         <Outlet/>
   </div>

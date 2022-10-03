@@ -33,8 +33,8 @@ mongoose
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use("/alumni_portal/register", alumniregisterRoute);
-app.use("/alumni_portal/login", alumniloginRoute);
+app.use("/alumni_portal/alumni/register", alumniregisterRoute);
+app.use("/alumni_portal/alumni/login", alumniloginRoute);
 app.use("/groupEmail", emailRoute);
 app.use("/sms",smsRoute);
 app.use("/international_admissions/register",intladmRegister);

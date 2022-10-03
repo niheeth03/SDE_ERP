@@ -10,14 +10,14 @@ const Home=()=>{
 
     return (
         <div>
-        <nav class="navbar navbar-expand-lg bg-white">
+        <nav class="navbar navbar-expand-lg bg-light">
           <div class="container-fluid">
             
-            <Link to="home" class="nav-link active">Home</Link>
+            <Link to="../home" class="nav-link active">Home</Link>
             {/* <Link to="register" class="nav-link active">Register</Link>
             <Link to="login" class="nav-link active">Login</Link> */}
-            <Link to="payments" class="nav-link">Payments</Link>
-            <Link to="profile" class="nav-link active">Profile</Link>
+            <Link to="../payments" class="nav-link">Payments</Link>
+            <Link to="../profile" class="nav-link active">Profile</Link>
           </div>
         </nav>
         <div className="home1">
