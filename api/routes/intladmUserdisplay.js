@@ -9,7 +9,7 @@ router.post("/",async(req,res)=>{
     try{
     console.log("Inside courses fetch try block\n");
   //  console.log("email "+email);
-    curItem = await User.find({});
+    let curItem = await User.find({});
     console.log("hello "+curItem);
   //  console.log(curItem[0].email);
     res.send(curItem);

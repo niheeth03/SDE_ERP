@@ -20,8 +20,8 @@ import {
           </div>
         </nav> */}
         <div className="contain">
-            <button type="button" class="btn btn-outline-primary"><Link to="../admin/login" class="nav-link active">Admin Login</Link></button><br/>
-            <button type="submit" class="btn btn-outline-primary"><Link to="../alumni/login" class="nav-link active">Alumni Login</Link></button>
+            <button type="button" class="btn btn-outline-primary" style={{padding: 5, margin: 10}}><Link to="../admin/login" class="nav-link active">Admin Login</Link></button>
+            <button type="submit" class="btn btn-outline-primary" style={{padding: 5, margin: 10}}><Link to="../alumni/login" class="nav-link active">Alumni Login</Link></button>
         </div>
         <Outlet/>
   </div>

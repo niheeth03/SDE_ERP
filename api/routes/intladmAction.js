@@ -13,7 +13,7 @@ router.post("/",async(req,res)=>{
     try{
     console.log("In adm action\n");
     console.log("email "+email);
-    curItem = await User.updateMany({email: email,courseId: courseId,status: "pending"},{$set:{status: status}});
+    let curItem = await User.updateMany({email: email,courseId: courseId,status: "pending"},{$set:{status: status}});
     console.log("hello "+curItem);
     console.log(curItem[0].email);
     res.send(curItem);

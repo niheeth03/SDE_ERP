@@ -8,7 +8,15 @@ import './style.css'
 
 const Payments = () => {
     return (
-
+        <>
+         <nav class="navbar navbar-expand-lg bg-white">
+                <div class="container-fluid">
+                <Link to='../../home' class="nav-link-active">ERP</Link>
+                <Link to='../../home' class="nav-link-active">Home</Link>
+                <Link to='../application' class="nav-link-active">Application</Link>
+                <Link to='../payments' class="nav-link-active">Payments</Link>
+                </div>
+        </nav>
         <div class="container py-5">
             <div class="row mb-4">
                 <div class="col-lg-8 mx-auto text-center">
@@ -67,7 +75,7 @@ const Payments = () => {
             </div>
 
         </div>
-
+        </>
 
     )
 

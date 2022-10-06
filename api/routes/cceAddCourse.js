@@ -1,6 +1,5 @@
 const router=require("express").Router();
-const User = require("../models/alumni/alumniUser.js");
-const bcrypt = require('bcrypt');
+const User = require("../models/addCourse.js");
 const bodyParser = require("body-parser");
 
 
@@ -13,10 +12,8 @@ router.get("/", (req, res)=>{
 
 router.post("/",async(req,res)=>{
     try{
-        const salt=await bcrypt.genSalt(10);
         console.log("hello");
-        const hashedPass=await bcrypt.hash(req.body.password,salt);
-        req.body.password = hashedPass;
+        console.log(req.body);
         const newUser=new User(req.body);
         const user=await newUser.save();
         res.status(200);
@@ -26,6 +23,7 @@ router.post("/",async(req,res)=>{
     }catch(err){
         res.status(500);
         res.send("err");
+        console.log(err);
     }});
 
 module.exports=router

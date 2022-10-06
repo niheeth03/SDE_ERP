@@ -9,7 +9,7 @@ router.post("/",async(req,res)=>{
     console.log(req);
     console.log("Admin display\n");
     try{
-        const status=req.status ;
+    const status=req.status ;
     console.log("Admin display try block\n");
     curItem = await User.find({status:status });
     console.log("hello "+curItem);

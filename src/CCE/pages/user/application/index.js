@@ -35,46 +35,15 @@ const Application = () => {
   };
 
   return (
-
-    <div><nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-      Navbar
-    </a>
-
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">
-            Home <span class="sr-only">(current)</span>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            Features
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            Pricing
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+    <>
+     <nav class="navbar navbar-expand-lg bg-white">
+                <div class="container-fluid">
+                <Link to='../../home' class="nav-link-active">ERP</Link>
+                <Link to='../../home' class="nav-link-active">Home</Link>
+                <Link to='../application' class="nav-link-active">Application</Link>
+                <Link to='../payments' class="nav-link-active">Payments</Link>
+                </div>
+    </nav>
     <div class="applica">
       
       <form action="" className="farm" onSubmit={handleSubmit}>
@@ -164,7 +133,8 @@ const Application = () => {
         </span>
       )}
     </div>
-    </div>
+    
+    </>
   );
 };
 

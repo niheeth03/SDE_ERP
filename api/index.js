@@ -7,7 +7,8 @@ const cookieParser=require("cookie-parser");
 const session=require("express-session");
 const cors=require("cors");
 const alumniregisterRoute =require("./routes/alumniRegister.js");
-const alumniloginRoute=require("./routes/alumniLogin.js")
+const alumniloginRoute=require("./routes/alumniLogin.js");
+const alumadminloginRoute = require("./routes/alumadminLogin.js");
 const emailRoute=require("./routes/groupEmail.js");
 const smsRoute=require("./routes/sms.js");
 
@@ -16,6 +17,7 @@ const User = require("./models/alumniUser");
 const intladmLogin=require("./routes/intladmLogin.js");
 const intladmRegister=require("./routes/intladmRegister.js");
 const intladmFetchdata=require("./routes/intladmFetchdata.js");
+const cceaddcourse=require("./routes/cceAddCourse.js")
 const intladmSubmit=require("./routes/intladmSubmit");
 const intladmUserdisplay=require("./routes/intladmUserdisplay");
 const intladmAddCourse=require("./routes/intladmaddCourse");
@@ -43,6 +45,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use("/alumni_portal/alumni/register", alumniregisterRoute);
 app.use("/alumni_portal/alumni/login", alumniloginRoute);
+app.use("/alumni_portal/admin/login", alumadminloginRoute);
 app.use("/groupEmail", emailRoute);
 app.use("/sms",smsRoute);
 app.use("/international_admissions/user/register",intladmRegister);
@@ -53,7 +56,7 @@ app.use("/international_admissions/user/display",intladmUserdisplay);
 app.use("/international_admissions/admin/addcourse",intladmAddCourse);
 app.use("/international_admissions/admin/display",intladmAdmindisplay);
 app.use("/international_admissions/admin/action",intladmAction);
-
+app.use("/cce/addCourse",cceaddcourse)
 
 
 
