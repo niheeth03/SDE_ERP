@@ -62,7 +62,7 @@ const Pending = () => {
         }, []);
         return (
             <>
-            <div>{userData&&userData.map((data)=><Element firstName={data.firstName} middleName={data.middleName} lastName={data.lastName} email={data.email} gender courseName={data.courseName} courseId={data.courseId} status={data.status} />)}</div>
+            {/* <div>{userData&&userData.map((data)=><Element firstName={data.firstName} middleName={data.middleName} lastName={data.lastName} email={data.email} gender courseName={data.courseName} courseId={data.courseId} status={data.status} />)}</div> */}
             </>
         )
     }

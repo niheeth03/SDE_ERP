@@ -35,11 +35,11 @@ function Courses() {
   };
 
   return (
-    <div className="applicat bg-light">
-      <div className="farm">
-        <button type="submit" class="btn btn-success" onClick={handleSubmit}>
+    <div class="applica">
+      <form action="" className="farm" onSubmit={handleSubmit}>
+        {/* <button type="submit" class="btn btn-success" onClick={handleSubmit}>
             Add
-          </button>
+          </button> */}
         
         <div class="row mb-3">
           <label for="inputEmail3" class="col-sm-2 col-form-label">
@@ -73,7 +73,7 @@ function Courses() {
             />
           </div>
         </div>  
-          <div class="row mb-3">
+        <div class="row mb-3">
             <label for="qualification" class="form-label">
               Degree
             </label>
@@ -145,8 +145,9 @@ function Courses() {
           <button type="submit" class="btn btn-danger">
             Cancel
           </button>
-        </div>
+        </form>
       </div>
+
   );
 }
 
