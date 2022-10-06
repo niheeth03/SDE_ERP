@@ -27,14 +27,19 @@ import Alum_Admin_alumni from "./alumni_portal/pages/admin/alumni";
 // import Alum_email from "./alumni_portal/pages/groupEmail/groupEmail";
 // import Alumni_payments from "./alumni_portal/pages/payments";
 
+import International_User from "./international_admissions/pages/user/index";
+import International_Admin from "./international_admissions/pages/admin/index";
+import International_Commlogin from "./international_admissions/pages/commlogin/index";
+
 import International_admissions from "./international_admissions/index";
-import International_home from "./international_admissions/pages/home/index";
-import International_Application from "./international_admissions/pages/Application/index";
-import International_Login from "./international_admissions/pages/Login/index";
-import International_Register from "./international_admissions/pages/Register/index";
-import Application_Status from "./international_admissions/pages/Status/index";
-import International_Offers from "./international_admissions/pages/Offers/index"
-import Online_alerts from "./online_alerts/index"
+import International_home from "./international_admissions/pages/user/home/index";
+import International_Application from "./international_admissions/pages/user/application/index";
+import International_Login from "./international_admissions/pages/user/login/index";
+import International_Register from "./international_admissions/pages/user/register/index";
+import Application_Status from "./international_admissions/pages/user/status/index";
+import International_Offers from "./international_admissions/pages/user/courses/index";
+import International_Courses from "./international_admissions/pages/admin/courses/index"
+import Online_alerts from "./online_alerts/index";
 import Online_home from "./online_alerts/pages/home/index";
 import Email from "./online_alerts/pages/groupEmail/groupEmail";
 
@@ -63,11 +68,13 @@ function App() {
           <Route path="alumni_portal" element={<Alum_portal />}>
             <Route path="alumni" element={<Alum_Stud />}>
               <Route path="home" element={<Alum_Stud_home />} />
-              <Route path="login" element={<Alum_Stud_login />} />
-              <Route path="register" element={<Alum_Stud_register />} />
               <Route path="payments" element={<Alum_Stud_payments />} />
               <Route path="profile" element={<Alum_Stud_profile />} />
+              <Route path="login" element={<Alum_Stud_login />} />
+               <Route path="register" element={<Alum_Stud_register />} />
             </Route>
+            
+           
             <Route path="admin" element={<Alum_Admin />}>
               <Route path="home" element={<Alum_Admin_home />} />
               <Route path="login" element={<Alum_Admin_login />} />
@@ -79,12 +86,18 @@ function App() {
           </Route>
 
           <Route path='international_admissions' element={<International_admissions />}>
+          <Route path='user' element={<International_User/>}>
             <Route path='home' element={<International_home/>}/>
             <Route path='application' element={<International_Application />} />
             <Route path='login' element={<International_Login />} />
             <Route path='register' element={<International_Register />} />
             <Route path='application_status' element={<Application_Status />} />
-            <Route path='offers' element={<International_Offers />} />
+            <Route path='courses' element={<International_Offers />} />
+            </Route>
+            <Route path='admin' element={<International_Admin/>}>
+              <Route path='courses'  element={<International_Courses/>}/>
+            </Route>
+            <Route path='commlogin' element={<International_Commlogin/>}/>
           </Route>
           
           <Route path='online_alerts' element={<Online_alerts/>}>
