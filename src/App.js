@@ -45,6 +45,8 @@ import Email from "./online_alerts/pages/groupEmail/groupEmail";
 
 import Sms  from "./online_alerts/pages/sms/sms"
 //import CCE from "./cce/index"
+import CCE_Admin from "./cce/pages/admin/index"
+import CCE_User from "./cce/pages/user/index"
 import CCE_Certificates from "./cce/pages/admin/certificates/index"
 import CCE_Application from "./cce/pages/user/application/index"
 import CCE_Payments from "./cce/pages/user/payments/index"
@@ -105,19 +107,18 @@ function App() {
 
           <Route path='cce' >
              <Route path='home' element={<CCE_home/>}/>
-             <Route path="user">
+             <Route path="user" >
                   <Route path='application' element={<CCE_Application/>} />
                   <Route path='payments' element={<CCE_Payments/>} />
                   <Route path='register' element={<CCE_Registration/>} />
-                  <Route path='login' element={<CCE_User_Login/>} />
               </Route>
               <Route path="admin">
                   <Route path='certificates' element={<CCE_Certificates/>} />
                   <Route path='statistics' element={<CCE_Statistics/>} />
                   <Route path='shortlist' element={<CCE_Shortlist/>} />
-                  <Route path='login' element={<CCE_Admin_Login/>} />
               </Route>
-             
+              <Route path='user/login' element={<CCE_User_Login/>} />
+              <Route path='admin/login' element={<CCE_Admin_Login/>} />
           </Route>
 
          </Routes>

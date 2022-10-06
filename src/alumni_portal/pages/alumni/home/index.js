@@ -10,7 +10,7 @@ const Home=()=>{
 
     return (
         <div>
-        <nav class="navbar navbar-expand-lg bg-white">
+        <nav class="navbar navbar-expand-lg bg-light">
           <div class="container-fluid">
             
             <Link to="../home" class="nav-link active">Home</Link>
