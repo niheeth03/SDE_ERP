@@ -1,5 +1,5 @@
 const router=require("express").Router();
-const User = require("../models/alumniUser.js");
+const User = require("../models/alumni/alumniUser.js");
 const bcrypt = require('bcrypt');
 const bodyParser = require("body-parser");
 
