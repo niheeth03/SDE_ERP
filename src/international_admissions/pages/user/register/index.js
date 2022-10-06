@@ -36,9 +36,10 @@ function Register() {
       degree: degree,
       branch: branch,
       country: country,
+      mobileNumber: mobileNumber,
     };
     console.log("Were");
-    axios.post("/international_admissions/register", newStudent);
+    axios.post("/international_admissions/user/register", newStudent);
   };
 
   const handleCPassword = (e) => {
