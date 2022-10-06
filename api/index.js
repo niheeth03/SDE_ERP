@@ -14,7 +14,7 @@ const User = require("./models/alumniUser");
 const intladmLogin=require("./routes/intladmLogin.js");
 const intladmRegister=require("./routes/intladmRegister.js");
 const intladmFetchdata=require("./routes/intladmFetchdata.js");
-
+const cceaddcourse=require("./routes/cceAddCourse.js")
 
 
 mongoose
@@ -40,7 +40,7 @@ app.use("/sms",smsRoute);
 app.use("/international_admissions/register",intladmRegister);
 app.use("/international_admissions/login",intladmLogin);
 app.use("/international_admissions/fetchdata",intladmFetchdata)
-
+app.use("/cce/addCourse",cceaddcourse)
 
 app.listen(3080,()=>{
     console.log("Backend is running");

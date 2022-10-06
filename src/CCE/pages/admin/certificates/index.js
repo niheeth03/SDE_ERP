@@ -1,5 +1,6 @@
 import './style.css'
 import React, { Component } from "react";
+import {Link} from "react-router-dom";
 import { exportComponentAsPNG } from "react-component-export-image";
 
 class Apple extends Component {
@@ -11,7 +12,17 @@ class Apple extends Component {
   };
   render() {
     return (
+      <>
       
+     <nav class="navbar navbar-expand-lg bg-white">
+                <div class="container-fluid">
+                <Link to='../../../home' class="nav-link-active">ERP</Link>
+                <Link to='../../home' class="nav-link-active">Home</Link>
+                <Link to='../certificates' class="nav-link-active">Certificates</Link>
+                <Link to='../statistics' class="nav-link-active">Statistics</Link>
+                <Link to='../shortlist' class="nav-link-active">Shortlist</Link>
+                </div>
+    </nav>
       <div className="Apple">
         <div className="Meta">
           <h1>Generate Certificate</h1>
@@ -62,6 +73,7 @@ class Apple extends Component {
           </div>
         </div>
       </div>
+      </>
     );
   }
 }

@@ -36,8 +36,15 @@ const Application = () => {
   };
 
   return (
-
-
+    <>
+     <nav class="navbar navbar-expand-lg bg-white">
+                <div class="container-fluid">
+                <Link to='../../home' class="nav-link-active">ERP</Link>
+                <Link to='../../home' class="nav-link-active">Home</Link>
+                <Link to='../application' class="nav-link-active">Application</Link>
+                <Link to='../payments' class="nav-link-active">Payments</Link>
+                </div>
+    </nav>
     <div class="applica">
       <form action="" className="farm" onSubmit={handleSubmit}>
           <h2><b>Application</b></h2> 
@@ -70,13 +77,14 @@ const Application = () => {
       <br/>
       <button type="submit" class="btn btn-success">Submit</button><br/><br/>
       <button type="submit" class="btn btn-danger">Cancel</button>
-      <button type="button" class="btn btn-link btn-block btn-lg"><Link to="/cce/user/payments" className="link">Payments</Link></button>  
+  
       
 
       {Error && <span style={{color:"red" ,marginTop:"10px"}}>Something went wrong!</span>}
 
 
     </div>
+    </>
   );
 };
 
