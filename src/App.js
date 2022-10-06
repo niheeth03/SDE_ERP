@@ -55,6 +55,7 @@ import CCE_Shortlist from "./cce/pages/admin/shortlist/index"
 import CCE_Statistics from "./cce/pages/admin/statistics/index"
 import CCE_Registration from "./cce/pages/login/registration/index"
 import CCE_Admin_Login from "./cce/pages/login/admin_login/index"
+import CCE_Admin_addCourse from "./cce/pages/admin/addCourse/index"
 import CCE_User_Login from "./cce/pages/login/user_login/index"
 
 function App() {
@@ -116,6 +117,7 @@ function App() {
                   <Route path='certificates' element={<CCE_Certificates/>} />
                   <Route path='statistics' element={<CCE_Statistics/>} />
                   <Route path='shortlist' element={<CCE_Shortlist/>} />
+                  <Route path='addCourse' element={<CCE_Admin_addCourse/>}/>
               </Route>
               <Route path='user/login' element={<CCE_User_Login/>} />
               <Route path='admin/login' element={<CCE_Admin_Login/>} />

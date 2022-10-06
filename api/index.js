@@ -17,6 +17,7 @@ const User = require("./models/alumniUser");
 const intladmLogin=require("./routes/intladmLogin.js");
 const intladmRegister=require("./routes/intladmRegister.js");
 const intladmFetchdata=require("./routes/intladmFetchdata.js");
+const cceaddcourse=require("./routes/cceAddCourse.js")
 const intladmSubmit=require("./routes/intladmSubmit");
 const intladmUserdisplay=require("./routes/intladmUserdisplay");
 const intladmAddCourse=require("./routes/intladmaddCourse");
@@ -55,7 +56,7 @@ app.use("/international_admissions/user/display",intladmUserdisplay);
 app.use("/international_admissions/admin/addcourse",intladmAddCourse);
 app.use("/international_admissions/admin/display",intladmAdmindisplay);
 app.use("/international_admissions/admin/action",intladmAction);
-
+app.use("/cce/addCourse",cceaddcourse)
 
 
 

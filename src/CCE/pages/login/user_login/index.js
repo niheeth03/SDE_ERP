@@ -32,7 +32,7 @@ const Login=()=>{
     <div class="container-fluid">
     <Link to='../../../home' class="nav-link-active">ERP</Link>
     <Link to='../../home' class="nav-link-active">Home</Link>
-    <Link to='../../user/register' class="nav-link-active">Register</Link>
+    <Link to='../user/register' class="nav-link-active">Register</Link>
     </div>
     
    </nav>
@@ -87,7 +87,7 @@ const Login=()=>{
     <button type="submit"  onClick={handleSubmit}>Submit</button> */}
      {/* <button className="registerButton" type="submit" onClick={handleSubmit}>Submit</button><br/>
     <button type="button" class="btn btn-primary">Submit</button> */}
-    <div className="signup_link">Not a member? <Link className="reg" to="../register">Register</Link> </div>
+    <div className="signup_link">Not a member? <Link className="reg" to="../user/register">Register</Link> </div>
     
   </div>
   </>

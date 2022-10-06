@@ -9,7 +9,7 @@ router.post("/",async(req,res)=>{
     console.log("Admin display\n");
     try{
     console.log("Admin display try block\n");
-    curItem = await User.find({status: "pending"});
+    let curItem = await User.find({status: "pending"});
     console.log("hello "+curItem);
     console.log(curItem[0]);
     res.send(curItem);
