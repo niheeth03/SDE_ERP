@@ -1,0 +1,14 @@
+.cceh1{
+    color: white;
+}
+.all{
+    width : 50%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    overflow-x: hidden;
+}

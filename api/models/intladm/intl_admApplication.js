@@ -31,21 +31,24 @@ const UserSchema= mongoose.Schema({
         type: String,
         required:true
     },
-    password:{
-        type: String,
-        required:true
-    },
     country:{
         type:String,
         required: true
     },
-    mobileNumber:{
-        type:String,
+    courseId:{
+        type: String,
         required: true
-    }
-   
+    },
+   courseName:{
+    type: String,
+    required: true,
+   },
+   status:{
+    type: String,
+    required: true,
+   }
     
 },{timestamps:true})
 
-const UserModel = mongoose.model("intl_admusers",UserSchema);
+const UserModel = mongoose.model("intl_admapplication",UserSchema);
 module.exports = UserModel;
