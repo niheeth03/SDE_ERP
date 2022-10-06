@@ -1,4 +1,4 @@
-const User=require("../models/intladm/intl_admUser.js");
+const User=require("../models/intladm/intl_admAdmin.js");
 const router=require("express").Router();
 const bcrypt = require('bcrypt');
 
@@ -18,7 +18,7 @@ router.use(cors({
 router.use(cookieParser());
 router.use(
     session({
-        key: "userId",
+        key: "intl_admUserId",
         secret: "subscribe",
         resave: false,
         saveUninitialized: false,

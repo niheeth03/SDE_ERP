@@ -73,7 +73,7 @@ const Offers = () => {
         <td>{props.courseId}</td>
         <td>{props.courseName}</td>
         <td>{props.deadline}</td>
-        <td><button type="submit" value="Submit" onClick={()=>handleSubmit(i)}> Apply </button></td>
+        <td><button type="submit"class="btn btn-success btn-sm" value="Submit" onClick={()=>handleSubmit(i)}> Apply </button></td>
     </tr>
     </tbody></table></div>)
     }

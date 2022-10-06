@@ -43,7 +43,7 @@ import International_Courses from "./international_admissions/pages/admin/course
 import International_Pending from "./international_admissions/pages/admin/pending_applications/index"
 import International_Approved from "./international_admissions/pages/admin/approved/index"
 import International_Rejected from "./international_admissions/pages/admin/rejected/index"
-
+import International_Adm_Login from "./international_admissions/pages/admin/login/index"
 
 import Online_alerts from "./online_alerts/index";
 import Online_home from "./online_alerts/pages/home/index";
@@ -105,6 +105,7 @@ function App() {
               <Route path='pending'  element={<International_Pending/>}/>
               <Route path='rejected'  element={<International_Rejected/>}/>
               <Route path='approved'  element={<International_Approved/>}/>
+              <Route path="login" element={<International_Adm_Login/>}/>
             </Route>
             <Route path='commlogin' element={<International_Commlogin/>}/>
           </Route>
