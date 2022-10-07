@@ -74,6 +74,7 @@ const Offers = () => {
         } 
         return (
             <>
+            
             <div>{courses&&courses.map((data)=><Element courseId={data.courseId} courseName={data.courseName} deadline={data.deadline} index={i++} />)}</div>
             
                 
