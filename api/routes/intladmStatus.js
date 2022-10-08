@@ -8,7 +8,7 @@ router.post("/",async(req,res)=>{
     console.log("email"+email);
     try{
     console.log("email "+email);
-    curItem = await User.find({email: email});
+    let curItem = await User.find({email: email});
     console.log(curItem);
     console.log(curItem[0].email);
     }catch(err){

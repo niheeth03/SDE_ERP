@@ -29,8 +29,6 @@ router.post("/",async(req,res)=>{
             courseName: req.body.courseName,
             status: "pending"
         };
-        
-
         const newUser=new User(application);
         console.log(newUser);
         const user=await newUser.save().catch((err)=>console.log(err));

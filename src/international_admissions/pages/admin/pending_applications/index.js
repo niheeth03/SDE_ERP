@@ -20,14 +20,14 @@ const handleAction=(flag,email,courseId)=>{
         };
         axios.post("./action",obj).then((response) => {
                             console.log(response.data);
-                           // setUserData(response.data);
+                            //setUserData(response.data);
                         }).catch();
         
 }
 const Pending = () => {
   //  const userName = useRef("");
     const loggedIn = useRef(false);
-   // const [userData,setUserData]=useState(null);
+//    const [userData,setUserData]=useState(null);
     const [Login, setLogin] = useState(false);
     const [applications,setApplications]=useState(null);
    // const [UserName, setUser] = useState(false);
@@ -52,7 +52,7 @@ const Pending = () => {
                         for (let y in res[x]) { if (y == "user") { a = res[x][y] } else { b = res[x][y]; } };
                         console.log("a " + a);
                         console.log("b " + b);
-                        axios.post("./display").then((response) => {
+                        axios.post("./display",{status:"pending"}).then((response) => {
                             console.log(response.data);
                             setApplications(response.data);
                         }).catch();

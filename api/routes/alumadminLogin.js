@@ -1,4 +1,4 @@
-const alumniusers = require("../models/alumni/alumniUser.js");
+const alumniusers = require("../models/alumni/alumniAdmin.js");
 const router=require("express").Router();
 const bcrypt = require('bcrypt');
 
@@ -16,7 +16,7 @@ router.use(cors({
 router.use(cookieParser());
 router.use(
     session({
-        key: "alumniUserId",
+        key: "adminUserId",
         secret: "subscribe",
         resave: false,
         saveUninitialized: false,
@@ -31,12 +31,9 @@ router.get("/",(req,res)=>{
         console.log(req.session);
         const response={loggedIn: true,user: req.session.user}
         console.log(req.session.user);
-      //  const myResponse=JSON.stringify(response)
-      ///console logs
-        console.log("Calling from alumniLogin GET API")
+        console.log("Calling from adminLogin GET API")
         for(let x in response){if(x=="loggedIn")console.log(true);console.log(response[x]);}
-      //  console.log("GET"+myResponse.user);
-        /////
+
         res.send(response);
     }
     else{
@@ -77,23 +74,3 @@ router.post("/",async (req,res)=>{
 });
 
 module.exports=router
-
-
-
-/* const curData=await User.find({email: email});
-    if(curData.length > 0){
-        bcrypt.compare(password,curData[0].password,(err,response)=>{
-            if(response){
-                req.session.user= result;
-                console.log(req.session.user);
-                res.send("Correct combination");
-            }
-            else{
-                res.send("Please check your Username/Password");
-            }
-        })
-
-
-    }
-    else res.send("Please check your Username/Password");*/
-   // res.send(curData);

@@ -18,7 +18,7 @@ router.use(cors({
 router.use(cookieParser());
 router.use(
     session({
-        key: "userId",
+        key: "intl_admUserId",
         secret: "subscribe",
         resave: false,
         saveUninitialized: false,
@@ -46,6 +46,7 @@ router.get("/",(req,res)=>{
 
 router.post("/",async (req,res)=>{
     const email=req.body.email;
+    console.log(email);
     const password=req.body.password;
     User.find({email:email},(err,result)=>{
     if(result.length>0){
@@ -68,6 +69,7 @@ router.post("/",async (req,res)=>{
         })
     }
     else{
+        console.log(result);
         console.log("error hell");
         res.send({msg:"Please check your Username/Password"});
     }
