@@ -10,24 +10,24 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import { data } from "jquery";
-const handleAction=(flag,email,couseId)=>{
+const handleAction=(flag,email,courseId)=>{
         let status="reject"
         if(flag)status="approve"
         const obj={
             email: email,
             courseId: courseId,
             status:  status
-        }
+        };
         axios.post("./action",obj).then((response) => {
                             console.log(response.data);
-                            setUserData(response.data);
+                            //setUserData(response.data);
                         }).catch();
         
 }
 const Pending = () => {
   //  const userName = useRef("");
     const loggedIn = useRef(false);
-   // const [userData,setUserData]=useState(null);
+//    const [userData,setUserData]=useState(null);
     const [Login, setLogin] = useState(false);
     const [applications,setApplications]=useState(null);
    // const [UserName, setUser] = useState(false);
@@ -52,7 +52,7 @@ const Pending = () => {
                         for (let y in res[x]) { if (y == "user") { a = res[x][y] } else { b = res[x][y]; } };
                         console.log("a " + a);
                         console.log("b " + b);
-                        axios.post("./display").then((response) => {
+                        axios.post("./display",{status:"pending"}).then((response) => {
                             console.log(response.data);
                             setApplications(response.data);
                         }).catch();
@@ -62,7 +62,7 @@ const Pending = () => {
         }, []);
         return (
             <>
-            <div>{userData&&userData.map((data)=><Element firstName={data.firstName} middleName={data.middleName} lastName={data.lastName} email={data.email} gender courseName={data.courseName} courseId={data.courseId} status={data.status} />)}</div>
+            <div>{applications && applications.map((data)=><Element firstName={data.firstName} middleName={data.middleName} lastName={data.lastName} email={data.email} gender courseName={data.courseName} courseId={data.courseId} status={data.status} />)}</div>
             </>
         )
     }

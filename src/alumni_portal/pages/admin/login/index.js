@@ -76,7 +76,7 @@ const Login=()=>{
     <button type="submit"  onClick={handleSubmit}>Submit</button> */}
      {/* <button className="registerButton" type="submit" onClick={handleSubmit}>Submit</button><br/>
     <button type="button" class="btn btn-primary">Submit</button> */}
-    <div className="signup_link">Not a member? <Link className="reg" to="../register">Register</Link> </div>
+    
     
   </div>
   )

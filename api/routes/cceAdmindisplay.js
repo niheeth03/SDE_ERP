@@ -1,4 +1,4 @@
-const User=require("../models/cceApplication.js");
+const User=require("../models/cce/cceApplication.js");
 const router=require("express").Router();
 const bodyParser = require("body-parser");
 

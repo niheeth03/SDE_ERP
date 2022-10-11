@@ -9,7 +9,7 @@ import {
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
-
+import "./style.css"
 
     
 const Offers = () => {
@@ -57,12 +57,25 @@ const Offers = () => {
     const Element = (props) => {
     let i=props.index;
 
-    return (<tr>
+    return (
+        <div className="tabl">
+        <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Course-ID</th>
+            <th scope="col">Course Name</th>
+            <th scope="col">Deadline</th>
+            <th scope="col">Apply</th>
+          </tr>
+        </thead>
+        <tbody> 
+    <tr class="table-light">
         <td>{props.courseId}</td>
         <td>{props.courseName}</td>
         <td>{props.deadline}</td>
-        <td><button type="submit" value="Submit" onClick={()=>handleSubmit(i)}> Apply </button></td>
-    </tr>)
+        <td><button type="submit"class="btn btn-success btn-sm" value="Submit" onClick={()=>handleSubmit(i)}> Apply </button></td>
+    </tr>
+    </tbody></table></div>)
     }
     const handleSubmit=(i)=>{
             const details={
@@ -74,6 +87,7 @@ const Offers = () => {
         } 
         return (
             <>
+            
             <div>{courses&&courses.map((data)=><Element courseId={data.courseId} courseName={data.courseName} deadline={data.deadline} index={i++} />)}</div>
             
                 

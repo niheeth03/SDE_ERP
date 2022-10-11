@@ -1,6 +1,6 @@
 const router=require("express").Router();
-const User = require("../models/cceApplication.js");
-const User2= require("../models/cceRegister.js");
+const User = require("../models/cce/cceApplication.js");
+const User2= require("../models/cce/cceRegister.js");
 const bodyParser = require("body-parser");
 
 router.get("/", (req, res)=>{

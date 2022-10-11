@@ -10,11 +10,11 @@ router.get("/", (req, res)=>{
 router.post("/",async(req,res)=>{
     try{
         console.log(req.body);
-        console.log("hello from intl_adms");        
+        console.log("hello from intl_adms add courses\n");        
         const newUser=new User(req.body);
         console.log(newUser);
         const user=await newUser.save().catch((err)=>console.log(err));
-        console.log("hello after save");
+        console.log("hello after saving the course");
         res.status(200);
         console.log(user);
         res.send(user);

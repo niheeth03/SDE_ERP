@@ -1,4 +1,4 @@
-const User=require("../models/cceRegister.js");
+const User=require("../models/cce/cceRegister.js");
 const router=require("express").Router();
 const bcrypt = require('bcrypt');
 

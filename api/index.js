@@ -1,4 +1,4 @@
-const express =require("express")
+const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const dotenv=require("dotenv");
@@ -30,23 +30,28 @@ const cceCoursesDisplay=require("./routes/cceCoursesDisplay")
 const cceAction=require("./routes/cceAction")
 const cceAdminDisplay=require("./routes/cceAdminDisplay")
 mongoose
-    .connect("mongodb+srv://niheeth23:laxminilayam@mastercluster.9eqlou1.mongodb.net/SDE_ERP?retryWrites=true&w=majority", (err, db) => {
-        if(err) throw err;
-        var dB = db.useDb("SDE_ERP");
-        dB.collection("alumniusers").findOne({}, function(err, result) {
-            if (err) throw err;
-            console.log(result);
-        });
-        // console.log(dB.intl_admcourses.find());
-    })
-    .then(console.log("connected to mongoDB"))
-    .catch((err)=>console.log(err))
+  .connect(
+    "mongodb+srv://niheeth23:laxminilayam@mastercluster.9eqlou1.mongodb.net/SDE_ERP?retryWrites=true&w=majority",
+    (err, db) => {
+      if (err) throw err;
+      var dB = db.useDb("SDE_ERP");
+      dB.collection("alumniusers").findOne({}, function (err, result) {
+        if (err) throw err;
+        console.log(result);
+      });
+      // console.log(dB.intl_admcourses.find());
+    }
+  )
+  .then(console.log("connected to mongoDB"))
+  .catch((err) => console.log(err));
 
 app.use(express.json());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/alumni_portal/alumni/register", alumniregisterRoute);
 app.use("/alumni_portal/alumni/login", alumniloginRoute);
+app.use("/alumni_portal/admin/login", alumadminloginRoute);
+app.use("/alumni_portal/admin/fetchdetails", alumadminFetchRoute);
 app.use("/groupEmail", emailRoute);
 app.use("/sms",smsRoute);
 app.use("/international_admissions/user/register",intladmRegister);
@@ -70,7 +75,7 @@ app.listen(3080,()=>{
 });
 
 {
-/*Workflow of api :My understanding
+  /*Workflow of api :My understanding
 1)All the lines except app.* will be executed exception app.listen()
 2)When a request is sent to the server the app.* lines will be executed in the same order
 as soon as it finds a match in path the execution terminates unless specifed a explicit next()

@@ -38,6 +38,7 @@ const Alumni_payments = () => {
             }
           }
         }
+        console.log(res["data"]["user"]);
       })
       .catch(console.log("errorrrr"));
   }, []);
@@ -203,7 +204,24 @@ const Alumni_payments = () => {
       </div>
     );
   } else {
-    return <>"hello"</>;
+    return (
+    <div>
+      <nav class="navbar navbar-expand-lg bg-white">
+          <div class="container-fluid">
+            <Link to="../home" class="nav-link active">
+              Home
+            </Link>
+            {/* <Link to="register" class="nav-link active">Register</Link>
+            <Link to="login" class="nav-link active">Login</Link> */}
+            <Link to="../payments" class="nav-link">
+              Payments
+            </Link>
+            <Link to="../profile" class="nav-link active">
+              Profile
+            </Link>
+          </div>
+        </nav>
+    </div>);
   }
 };
 

@@ -1,5 +1,5 @@
 const router=require("express").Router();
-const User = require("../models/cceRegister.js");
+const User = require("../models/cce/cceRegister.js");
 const bcrypt = require('bcrypt');
 const bodyParser = require("body-parser");
 

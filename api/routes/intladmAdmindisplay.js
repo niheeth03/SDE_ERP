@@ -5,11 +5,13 @@ const bodyParser = require("body-parser");
 
 router.post("/",async(req,res)=>{
    // const email = req.body.email;
+   
     console.log(req);
     console.log("Admin display\n");
     try{
+    const status=req.status ;
     console.log("Admin display try block\n");
-    let curItem = await User.find({status: "pending"});
+    curItem = await User.find({status:status });
     console.log("hello "+curItem);
     console.log(curItem[0]);
     res.send(curItem);
