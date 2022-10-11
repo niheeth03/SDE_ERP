@@ -41,6 +41,7 @@ function Register() {
     };
     console.log("Were");
     axios.post("/alumni_portal/register", newStudent);
+    window.location.reload(true);
   }
 
   const handleCPassword = (e) => {

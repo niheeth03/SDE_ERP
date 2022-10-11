@@ -5,29 +5,27 @@ const UserSchema= mongoose.Schema({
         type: String,
         required:true
     },
-    id:{
+    email:{
         type: String,
         required:true,
         unique:true
     },
-    commence:{
-        type: String,
-        required:true,
-    },
-    completion:{
+
+    gender:{
         type: String,
         required:true
     },
-    department:{
+
+    occupation:{
         type: String,
         required:true
     },
-    participants:{
-        type:String,
+    password:{
+        type: String,
         required:true
     }
     
 },{timestamps:true})
 
-const UserModel = mongoose.model("addCourses",UserSchema);
+const UserModel = mongoose.model("cceRegister",UserSchema);
 module.exports = UserModel;

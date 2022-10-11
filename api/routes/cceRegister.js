@@ -1,9 +1,7 @@
 const router=require("express").Router();
-const User = require("../models/addCourse.js");
+const User = require("../models/cceRegister.js");
+const bcrypt = require('bcrypt');
 const bodyParser = require("body-parser");
-
-
-
 
 router.get("/", (req, res)=>{
     console.log("open");   
@@ -12,8 +10,10 @@ router.get("/", (req, res)=>{
 
 router.post("/",async(req,res)=>{
     try{
+        const salt=await bcrypt.genSalt(10);
         console.log("hello");
-        console.log(req.body);
+        const hashedPass=await bcrypt.hash(req.body.password,salt);
+        req.body.password = hashedPass;
         const newUser=new User(req.body);
         const user=await newUser.save();
         res.status(200);
@@ -22,8 +22,7 @@ router.post("/",async(req,res)=>{
         
     }catch(err){
         res.status(500);
-        res.send({msg:"Please check Course ID/Course ID is already taken"});
-        console.log(err);
+        res.send("err");
     }});
 
 module.exports=router

@@ -1,33 +1,39 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose")
 
 const UserSchema= mongoose.Schema({
     name:{
         type: String,
         required:true
     },
-    id:{
+    email:{
         type: String,
         required:true,
         unique:true
     },
-    commence:{
+    degree:{
         type: String,
         required:true,
     },
-    completion:{
-        type: String,
-        required:true
-    },
     department:{
         type: String,
-        required:true
+        required:true,
     },
-    participants:{
-        type:String,
-        required:true
-    }
+    courseId:{
+        type: String,
+        required: true
+    },
+
+   courseName:{
+    type: String,
+    required: true,
+   },
+   
+   status:{
+    type: String,
+    required: true,
+   }
     
 },{timestamps:true})
 
-const UserModel = mongoose.model("addCourses",UserSchema);
+const UserModel = mongoose.model("cceApplication",UserSchema);
 module.exports = UserModel;

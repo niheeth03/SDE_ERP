@@ -16,16 +16,19 @@ const User = require("./models/alumniUser");
 const intladmLogin=require("./routes/intladmLogin.js");
 const intladmRegister=require("./routes/intladmRegister.js");
 const intladmFetchdata=require("./routes/intladmFetchdata.js");
-const cceaddcourse=require("./routes/cceAddCourse.js")
+const cceAddCourse=require("./routes/cceAddCourse.js")
 const intladmSubmit=require("./routes/intladmSubmit");
 const intladmUserdisplay=require("./routes/intladmUserdisplay");
 const intladmAddCourse=require("./routes/intladmaddCourse");
-const intladmAdmindisplay=require("./routes/intladmAdmindisplay");
+const intladmAdmindisplay=require("./routes/intladmAdminDisplay");
 const intladmAction=require("./routes/intladmAction");
-
-
-
-
+const cceRegister=require("./routes/cceRegister.js")
+const cceApplicationStatus=require("./routes/cceApplicationStatus.js")
+const cceLogin=require("./routes/cceLogin.js")
+const cceApplication=require("./routes/cceApplication.js")
+const cceCoursesDisplay=require("./routes/cceCoursesDisplay")
+const cceAction=require("./routes/cceAction")
+const cceAdminDisplay=require("./routes/cceAdminDisplay")
 mongoose
     .connect("mongodb+srv://niheeth23:laxminilayam@mastercluster.9eqlou1.mongodb.net/SDE_ERP?retryWrites=true&w=majority", (err, db) => {
         if(err) throw err;
@@ -54,10 +57,14 @@ app.use("/international_admissions/user/display",intladmUserdisplay);
 app.use("/international_admissions/admin/addcourse",intladmAddCourse);
 app.use("/international_admissions/admin/display",intladmAdmindisplay);
 app.use("/international_admissions/admin/action",intladmAction);
-app.use("/cce/addCourse",cceaddcourse)
-
-
-
+app.use("/cce/admin/addCourse",cceAddCourse)
+app.use("/cce/user/register",cceRegister)
+app.use("/cce/user/status",cceApplicationStatus)
+app.use("/cce/user/application",cceApplication)
+app.use("cce/user/login",cceLogin)
+app.use("cce/admin/cceCoursesDisplay",cceCoursesDisplay)
+app.use("cce/admin/action",cceAction)
+app.use("cce/admin/cceAdminDisplay",cceAdminDisplay)
 app.listen(3080,()=>{
     console.log("Backend is running");
 });
