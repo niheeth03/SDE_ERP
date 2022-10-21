@@ -25,6 +25,19 @@ const intladmAddCourse = require("./routes/intladmaddCourse");
 const intladmAdmindisplay = require("./routes/intladmAdmindisplay");
 const intladmAction = require("./routes/intladmAction");
 
+
+const ticketAdminLogin= require("./routes/ticketAdminLogin.js");
+const ticketUserLogin=require("./routes/ticketSystemLogin");
+const ticketUserRegister= require("./routes/ticketingRegister");
+const addTicket= require("./routes/addTicket.js");
+const closeTicket= require("./routes/closeTicket.js");
+const ticketUserDisplay= require("./routes/ticketUserdisplay.js");
+const ticketAdminDisplay= require("./routes/ticketAdmindisplay.js");
+
+
+
+
+
 mongoose
   .connect(
     "mongodb+srv://niheeth23:laxminilayam@mastercluster.9eqlou1.mongodb.net/SDE_ERP?retryWrites=true&w=majority",
@@ -59,6 +72,12 @@ app.use("/international_admissions/admin/addcourse", intladmAddCourse);
 app.use("/international_admissions/admin/display", intladmAdmindisplay);
 app.use("/international_admissions/admin/action", intladmAction);
 app.use("/international_admissions/admin/login", intladmAdminlogin);
+app.use("/ticketing_system/user/register",ticketUserRegister);
+app.use("/ticketing_system/user/login",ticketUserLogin);
+app.use("/ticketing_system/user/display",ticketUserDisplay);
+app.use("/ticketing_system/user/raiseticket",addTicket);
+app.use("/ticketing_system/admin/display",ticketAdminDisplay);
+app.use("/ticketing_system/admin/closeticket",closeTicket);
 
 app.listen(3080, () => {
   console.log("Backend is running");
