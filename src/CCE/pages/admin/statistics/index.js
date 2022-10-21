@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -10,7 +10,8 @@ import {
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import CourseInfo from "./course_info"
-import './style_statistics.css'
+import './style_stat.css'
+import axios from 'axios'
 
 ChartJS.register(
   CategoryScale,
@@ -21,13 +22,7 @@ ChartJS.register(
   Legend
 );
 
-const courseRecords = {
-    ListOfCourses: [
-      { name: "ML", participants:"50", start_date:"09-08-2017",end_date:"09-09-2017",cost:"2000",fees:"500"},
-      { name: "DS", participants:"50", start_date:"09-08-2017",end_date:"09-09-2017",cost:"2000",fees:"500"},
-      { name: "Internet of Things", participants:"100", start_date:"09-08-2017",end_date:"09-09-2017",cost:"2000",fees:"500"},
-    ],
-  };
+
 
 export const options = {
   responsive: true,
@@ -57,6 +52,21 @@ export const data = {
 };
 
 export default function Attendance() {
+   const [CoursesList,setCoursesList]=useState([]);
+   const courseRecords = async()=>{
+    const res=await axios.post("/cce/admin/cceCoursesDisplay");
+      setCoursesList(res.data) ;
+    };
+    useEffect(() => {
+      
+    courseRecords()
+      
+    }, [])
+    
+    const Records = {
+      
+      coursesList:CoursesList
+    }
     return (
       <body>
         <div className="d-flex flex-column align-items-center ">
@@ -67,8 +77,9 @@ export default function Attendance() {
           </div>
         </div>
         <div className="d-flex flex-column">
+          courseRecords();
           <CourseInfo
-            ListOfCourses={courseRecords.ListOfCourses}
+            ListOfCourses={Records.coursesList}
            />
         </div>
       </body>

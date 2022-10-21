@@ -19,7 +19,7 @@ function Register() {
 
   const Navigate = useNavigate();
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     const newCourse = {
       name: name,
       id: id,
@@ -28,7 +28,8 @@ function Register() {
       department: department,
     };
     
-    axios.post("/cce/addCourse", newCourse);
+    axios.post("/cce/admin/addCourse", newCourse);
+    window.location.reload(true);
   }
 
 

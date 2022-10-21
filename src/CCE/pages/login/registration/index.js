@@ -30,7 +30,6 @@ function Registration() {
   const handleSubmit=()=>{
     const newStudent={
       name: name,
-      rollnumber:rollNumber,
       email: email,
       batch:batch,
       gender:gender,
@@ -40,7 +39,8 @@ function Registration() {
       password: password
     };
     console.log("Were");
-    axios.post("/alumni_portal/register",newStudent);
+    axios.post("/cce/user/register",newStudent);
+    window.location.reload(true);
   }
 
   const handleCPassword = (e) => {

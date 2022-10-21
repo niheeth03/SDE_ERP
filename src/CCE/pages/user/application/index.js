@@ -6,6 +6,11 @@ import "./style.css";
 import { ModelBuildList } from "twilio/lib/rest/autopilot/v1/assistant/modelBuild";
 
 const Application = () => {
+<<<<<<< HEAD
+  const [email,setEmail] = useState('');
+  const [courseName,setCourseName]=useState(""); 
+  const [courseId,setCourseId]=useState(""); 
+=======
   const [firstName, setFirstName] = useState("");
   const [middleName, setMiddleName] = useState("");
   const [LastName, setLastName] = useState("");
@@ -18,20 +23,16 @@ const Application = () => {
   const [Error, setError] = useState(false);
   const [courseName, setCourseName] = useState("");
   const [courseId, setCourseId] = useState("");
+>>>>>>> 51f1b7821b8a33b9de6779c7d3bf67711ebce219
 
   const handleSubmit = () => {
-    // const newStudent = {
-    //   firstname: firstName,
-    //   middleName: middleName,
-    //   lastName:  LastName,
-    //   mobileNumber: MobileNumber,
-    //   email: email,
-    //   password: password,
-    //   degree: degree,
-
-    // };
+    const newStudent = {
+      email: email,
+      courseId:courseId,
+      courseName:courseName,
+    };
     console.log("Were");
-    //axios.post("/register", newStudent);
+    axios.post("/cce/user/application", newStudent);
   };
 
   return (
