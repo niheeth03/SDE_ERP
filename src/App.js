@@ -64,6 +64,19 @@ import CCE_Admin_Login from "./cce/pages/login/admin_login/index"
 import CCE_Admin_addCourse from "./cce/pages/admin/addCourse/index"
 import CCE_User_Login from "./cce/pages/login/user_login/index"
 
+import Ticketing_System from "./ticketing_system/index"
+import Ticketing_Admin from "./ticketing_system/pages/admin/index"
+import Ticketing_User from "./ticketing_system/pages/user/index"
+import Ticketing_Admin_Login from "./ticketing_system/pages/admin/login/index"
+import Tickecting_Commonlogin from "./ticketing_system/pages/commlogin/index"
+import Ticketing_DisplayTickets from "./ticketing_system/pages/admin/displaytickets/index"
+import Ticketing_ClosedTickets from "./ticketing_system/pages/admin/closedtickets/index"
+import Ticketing_User_Login from "./ticketing_system/pages/user/login/index"
+import Ticketing_User_Register from "./ticketing_system/pages/user/register/index"
+import Ticketing_Raiseticket from "./ticketing_system/pages/user/raiseticket/index"
+import Ticketing_Ticketstatus from "./ticketing_system/pages/user/ticketstatus/index"
+
+
 function App() {
   return (
     <div className="App">
@@ -71,6 +84,7 @@ function App() {
         <Routes>
           <Route path="home" element={<Home />} />
           <Route path="/" element={<Navigate to="home" />} />
+
           <Route path="alumni_portal" element={<Alum_portal />}>
             <Route path="alumni" element={<Alum_Stud />}>
               <Route path="home" element={<Alum_Stud_home />} />
@@ -131,6 +145,25 @@ function App() {
               </Route>
               <Route path='user/login' element={<CCE_User_Login/>} />
               <Route path='admin/login' element={<CCE_Admin_Login/>} />
+          </Route>
+
+          <Route path='ticketing_system'element={<Ticketing_System/>}>
+
+            <Route path='commlogin' element={<Tickecting_Commonlogin/>}/>
+
+            <Route path='admin' element={<Ticketing_Admin/>}>
+              <Route path='closeticket' element={<Ticketing_ClosedTickets/>}/>
+              <Route path='display' element={<Ticketing_DisplayTickets/>}/>
+              <Route path ='login' element={<Ticketing_Admin_Login/>}/>
+            </Route>
+
+            <Route path='user' element={<Ticketing_User/>}>
+              <Route path='login' element={<Ticketing_User_Login/>}/>
+              <Route path='register' element={<Ticketing_User_Register/>}/>
+              <Route path='raiseticket' element={<Ticketing_Raiseticket/>}/>
+              <Route path='display' element={<Ticketing_Ticketstatus/>}/>
+            </Route>
+            
           </Route>
 
          </Routes>
