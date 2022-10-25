@@ -8,9 +8,18 @@ import "./style.css";
 import { ModelBuildList } from "twilio/lib/rest/autopilot/v1/assistant/modelBuild";
 
 const Application = () => {
-  const [email,setEmail] = useState('');
-  const [courseName,setCourseName]=useState(""); 
-  const [courseId,setCourseId]=useState(""); 
+  const [firstName, setFirstName] = useState("");
+  const [middleName, setMiddleName] = useState("");
+  const [LastName, setLastName] = useState("");
+  const [MobileNumber, setMobileNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [degree, setDegree] = useState("");
+  const [branch, setBranch] = useState("");
+  const [gender, setGender] = useState("");
+  const [Error, setError] = useState(false);
+  const [courseName, setCourseName] = useState("");
+  const [courseId, setCourseId] = useState("");
 
   const handleSubmit = () => {
     const newStudent = {
