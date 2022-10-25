@@ -1,3 +1,5 @@
+/* Schema which contains application details */
+
 const mongoose = require("mongoose")
 
 const UserSchema= mongoose.Schema({

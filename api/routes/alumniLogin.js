@@ -1,3 +1,4 @@
+/*Backend for Alumni login to Alumni portal */
 const alumniusers = require("../models/alumni/alumniUser.js");
 const router=require("express").Router();
 const bcrypt = require('bcrypt');

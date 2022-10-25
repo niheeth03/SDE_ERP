@@ -1,3 +1,5 @@
+/*Admin can able to see no. of participants registered in a course */
+
 const router=require("express").Router();
 const User = require("../models/cce/addCourse.js");
 const bodyParser = require("body-parser");

@@ -1,3 +1,5 @@
+/*Alumni can see their details filled in in this page */
+
 import axios from "axios";
 import { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";

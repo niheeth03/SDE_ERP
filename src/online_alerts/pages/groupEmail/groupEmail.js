@@ -1,3 +1,5 @@
+/* admin can send Group emails via this page. */
+
 import React, { useState } from "react";
 import axios from 'axios'
  

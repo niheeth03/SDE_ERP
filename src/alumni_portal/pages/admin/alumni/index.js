@@ -1,3 +1,5 @@
+/*This page is used to display all the information about the registered alumni */
+
 import axios from "axios";
 import React, { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"

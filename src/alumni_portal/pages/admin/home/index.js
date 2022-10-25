@@ -1,3 +1,5 @@
+/*Main page displayed to the admin when logged in */
+
 import axios from "axios";
 import { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"

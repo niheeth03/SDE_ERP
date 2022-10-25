@@ -1,3 +1,4 @@
+/* Admin can change the status of application */
 const router=require("express").Router();
 const User = require("../models/cce/cceApplication.js");
 const bodyParser = require("body-parser");

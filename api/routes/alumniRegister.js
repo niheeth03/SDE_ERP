@@ -1,3 +1,5 @@
+/* Alumni can register in Alumni portal */
+
 const router=require("express").Router();
 const User = require("../models/alumni/alumniUser.js");
 const bcrypt = require('bcrypt');

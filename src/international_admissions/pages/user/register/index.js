@@ -1,3 +1,5 @@
+/* Applicants has to register before applying to any course */
+
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./style.css";

@@ -1,3 +1,5 @@
+/*backend to fetch details of user */
+
 const User=require("../models/alumni/alumniUser.js");
 const router=require("express").Router();
 

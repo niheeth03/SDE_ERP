@@ -1,3 +1,6 @@
+/*This is the page where admin can navigate to admin login and alumni can navigate to alumni login */
+
+
 import {
     BrowserRouter as Router,
     Routes,

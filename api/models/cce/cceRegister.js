@@ -1,3 +1,5 @@
+/* User can register in CCE portal */
+
 const mongoose = require("mongoose");
 
 const UserSchema= mongoose.Schema({

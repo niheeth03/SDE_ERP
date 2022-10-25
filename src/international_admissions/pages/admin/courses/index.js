@@ -1,3 +1,5 @@
+/*admin can add courses and all the details about it */
+
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./style.css";

@@ -1,3 +1,5 @@
+/* admin can able to send sms to all the users */
+
 import React, { useState } from "react";
 import axios from 'axios'
  

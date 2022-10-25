@@ -1,3 +1,5 @@
+/*Applicants can able to see their application status in this page */
+
 import {
 
     BrowserRouter as Router,

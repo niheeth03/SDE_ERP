@@ -1,3 +1,5 @@
+/*Rejected admissions can be seen here */
+
 import {
 
     BrowserRouter as Router,

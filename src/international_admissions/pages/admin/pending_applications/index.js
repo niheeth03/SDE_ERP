@@ -1,3 +1,5 @@
+/* Admin can see pending applications and able to approve or reject it.  */
+
 import {
 
     BrowserRouter as Router,

@@ -1,3 +1,5 @@
+// Internal Admission Application Submission 
+
 const router=require("express").Router();
 const User = require("../models/intladm/intl_admApplication.js");
 const User2= require("../models/intladm/intl_admUser.js");

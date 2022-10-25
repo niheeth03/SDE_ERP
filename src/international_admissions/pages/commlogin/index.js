@@ -1,3 +1,5 @@
+/*  Admin can navigate to admin login and applicant can navigate to applicant login page */
+
 import {
     BrowserRouter as Router,
     Routes,

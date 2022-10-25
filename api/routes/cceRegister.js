@@ -1,3 +1,4 @@
+/*Users can able to register here */
 const router=require("express").Router();
 const User = require("../models/cce/cceRegister.js");
 const bcrypt = require('bcrypt');

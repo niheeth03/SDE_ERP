@@ -1,3 +1,4 @@
+/* Admin can able to send sms */
 const express = require('express');
 const router=require("express").Router();
 const accountSid = "ACec292264ed5a0dfa0163ea00302d4c73";

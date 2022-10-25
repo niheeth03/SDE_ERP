@@ -1,3 +1,5 @@
+/*Fetch all the applications */
+
 const router=require("express").Router();
 const User = require("../models/intladm/intl_admCourses.js");
 const bodyParser = require("body-parser");

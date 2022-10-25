@@ -1,3 +1,6 @@
+/*Admin  can add a new Course and its details in it  */
+
+
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -26,6 +29,7 @@ function Register() {
       commence: comm_date,
       completion: comp_date,
       department: department,
+      participants:"0",
     };
     
     axios.post("/cce/admin/addCourse", newCourse);

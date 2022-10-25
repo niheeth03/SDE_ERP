@@ -1,3 +1,4 @@
+/* Admin can add course in CCE. This schema is for noting all the details of the course.*/
 const mongoose = require("mongoose");
 
 const UserSchema= mongoose.Schema({

@@ -1,3 +1,4 @@
+/* User of alumni portal details schema */
 const mongoose = require("mongoose");
 
 const UserSchema= mongoose.Schema({

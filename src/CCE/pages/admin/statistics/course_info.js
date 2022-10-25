@@ -1,4 +1,4 @@
-
+/*Card displaying all the internal details of course like no.of people attended the course , fees collected ,cost incurred */
 
 const AttendanceCard = (props) => {
     return (
@@ -23,16 +23,20 @@ const AttendanceCard = (props) => {
                             <span className="col">{item.name}</span>
                           </div>
                           <div className="row m-0">
+                            <h6 className="col-6 col-md-3 col-lg-2">Cost Incurred</h6>
+                            <span className="col">{item.department}</span>
+                          </div>
+                          <div className="row m-0">
                             <h6 className="col-6 col-md-3 col-lg-2"> No. of Participants</h6>
                             <span className="col">{item.participants}</span>
                           </div>
                           <div className="row m-0">
                             <h6 className="col-6 col-md-3 col-lg-2">Date of Commence</h6>
-                            <span className="col">{item.start_date}</span>
+                            <span className="col">{item.commence}</span>
                           </div>
                           <div className="row m-0">
                             <h6 className="col-6 col-md-3 col-lg-2">Date of Completion</h6>
-                            <span className="col">{item.end_date}</span>
+                            <span className="col">{item.completion}</span>
                           </div>
                           <div className="row m-0">
                             <h6 className="col-6 col-md-3 col-lg-2">Cost Incurred</h6>

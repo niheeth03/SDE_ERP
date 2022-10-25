@@ -1,3 +1,5 @@
+/*Alumni gives donations to the campus via this page*/
+
 import {
   BrowserRouter as Router,
   Routes,

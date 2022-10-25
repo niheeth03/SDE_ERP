@@ -1,3 +1,5 @@
+/* Admin can add course  */
+
 const router=require("express").Router();
 const User = require("../models/cce/addCourse.js");
 const bodyParser = require("body-parser");

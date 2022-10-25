@@ -1,3 +1,5 @@
+/*  Applicants can able to login */
+
 const User=require("../models/cce/cceRegister.js");
 const router=require("express").Router();
 const bcrypt = require('bcrypt');

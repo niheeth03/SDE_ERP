@@ -1,3 +1,6 @@
+/* Admin able to see all the pending applications */
+
+
 const User=require("../models/cce/cceApplication.js");
 const router=require("express").Router();
 const bodyParser = require("body-parser");

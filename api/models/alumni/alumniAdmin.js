@@ -1,3 +1,5 @@
+/* admin of Alumni portal Schema */
+
 const mongoose = require("mongoose");
 
 const UserSchema= mongoose.Schema({

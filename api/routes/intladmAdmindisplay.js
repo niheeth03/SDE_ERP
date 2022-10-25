@@ -1,3 +1,4 @@
+/* Admin will able to see all the courses*/
 const User=require("../models/intladm/intl_admApplication.js");
 const router=require("express").Router();
 const bodyParser = require("body-parser");
